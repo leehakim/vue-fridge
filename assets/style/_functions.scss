@@ -1,0 +1,6 @@
+@function vw-pc($val) {
+  @return ($val / 1920) * 100vw;
+}
+@function vw-mo($val) {
+  @return ($val / 720) * 100vw;
+}
