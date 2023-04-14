@@ -1,14 +1,14 @@
 <template>
-  <section class="title">
+  <section class="section title">
     <picture>
       <source
         srcset="/title_bg_pc.png"
         media="all and (min-width: 769px)"
       />
-      <!-- <img src="assets/images/gnb_mo.png" alt="" /> -->
+      <img src="/title_bg_mo.png" alt="" />
     </picture>
     <div class="text-box">
-      <p class="tit"><span class="en-b">2022</span> 삼성전자 신상 컬렉션</p>
+      <p class="tit"><span class="en-b">2022</span> 삼성전자 <br class="m_show">신상 컬렉션</p>
       <p class="desc">
         올해 새롭게 선보이는 삼성 TV부터 BESPOKE 주방가전, 생활가전까지
         <br />
@@ -29,17 +29,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .text-box {
-    text-align: center;
-    .tit {
-      font-size: 48px;
-      letter-spacing: -0.05em;
-    }
-    .desc {
-      color: #666;
-      font-size: 22px;
-      line-height: 38px;
-      letter-spacing: -0.025em;
-    }
-  }
+  @import '@/assets/style/title.scss';
 </style>

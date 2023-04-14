@@ -1,10 +1,15 @@
+body, 
+html {
+  padding: 0;
+  margin: 0;
+}
 picture {
   display: block;
   width: 100%;
   img,
   source {
+    display: block;
     width: 100%;
-    vertical-align: top;
   }
 }
 em {

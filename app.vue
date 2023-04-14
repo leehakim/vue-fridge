@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="fridge">
     <TheTitle />
     <KeyVisual />
   </div>
