@@ -1,19 +1,13 @@
 <template>
-  <section class="kv">
-    key visual
-  </section>
+	<section class="kv">key visual</section>
 </template>
 
 <script>
 export default {
-  setup () {
-    
-
-    return {}
-  }
-}
+	setup() {
+		return {};
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
