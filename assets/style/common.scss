@@ -73,6 +73,10 @@ button {
   .section {
     position: relative;
     width: 100%;
+    .section-container {
+      width: vw-pc(1440);
+      margin: auto;
+    }
   }
 }
 

@@ -26,5 +26,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/style/title.scss';
+.title {
+	.text-box {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 100%;
+		text-align: center;
+	}
+	.tit {
+		font-size: vw-pc(48);
+		letter-spacing: -0.05em;
+	}
+	.desc {
+		margin-top: vw-pc(39);
+		color: #666;
+		font-size: vw-pc(22);
+		line-height: vw-pc(38);
+		letter-spacing: -0.025em;
+	}
+}
+
+@media (max-width: 768px) {
+	.title {
+		.tit {
+			font-size: vw-mo(72);
+			line-height: vw-mo(86);
+		}
+		.desc {
+			margin-top: vw-mo(68);
+			font-size: vw-mo(24);
+			line-height: vw-mo(38);
+			letter-spacing: -0.05em;
+		}
+	}
+}
 </style>

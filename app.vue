@@ -3,5 +3,6 @@
 		<TheTitle />
 		<TheTabs />
 		<KeyVisual />
+		<BenefitList />
 	</div>
 </template>

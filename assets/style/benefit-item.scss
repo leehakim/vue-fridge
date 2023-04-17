@@ -1,0 +1,81 @@
+.benefit-item {
+	position: relative;
+	width: vw-pc(424);
+	height: vw-pc(270);
+	background-color: #f8f8f8;
+	border-radius: vw-pc(10);
+	.tag {
+		position: absolute;
+		top: vw-pc(-7);
+		right: vw-pc(11);
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: vw-pc(-7);
+			right: vw-pc(-4);
+			width: 0;
+			height: 0;
+			border-bottom: vw-pc(7) solid #670a0e;
+			border-top: vw-pc(7) solid transparent;
+			border-left: vw-pc(7) solid transparent;
+			border-right: vw-pc(7) solid transparent;
+		}
+		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			width: vw-pc(58);
+			height: vw-pc(56);
+			background-color: #ae3438;
+			border-radius: vw-pc(3);
+			color: #fff;
+			font-size: vw-pc(15);
+			font-weight: 700;
+			letter-spacing: -0.025em;
+			line-height: vw-pc(20);
+		}
+	}
+	.text-box {
+		position: absolute;
+		top: vw-pc(25);
+		left: vw-pc(30);
+	}
+	.tit {
+		display: inline-flex;
+		align-items: center;
+		height: vw-pc(20);
+		padding: 0 vw-pc(5);
+		background-color: #000;
+		border-radius: vw-pc(3);
+		color: #fff;
+		font-size: vw-pc(14);
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		line-height: 1.3;
+	}
+	.copy {
+		margin: vw-pc(15) 0;
+		font-size: vw-pc(25);
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		line-height: vw-pc(30);
+	}
+  .cta {
+    display: inline-block;
+    margin-bottom: vw-pc(64);
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-size: vw-pc(16);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .disclaimer {
+    font-size: vw-pc(14);
+    letter-spacing: -0.025em;
+    line-height: vw-pc(18);
+  }
+}
