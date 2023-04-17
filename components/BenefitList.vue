@@ -11,11 +11,9 @@
 							삼성전자 멤버 십 포인트<br /><span class="en-b">40,000 P</span>
 							증정
 						</template>
-						<template #cta>
-							<a href="" class="cta">자세히 보기</a>
-						</template>
+						<template #cta>자세히 보기</template>
 						<template #disclaimer>
-							* 삼성전자 멤버십 구매 금액대별<br />포인트 적립 기준
+							삼성전자 멤버십 구매 금액대별<br />포인트 적립 기준
 						</template>
 					</BenefitItem>
 				</li>
@@ -24,7 +22,7 @@
 						<template #tag> 전문<br />설치 </template>
 						<template #tit> 삼성닷컴 혜택 </template>
 						<template #copy> 고객이 원하는 배송일<br />지정 서비스 </template>
-						<template #disclaimer> * 일부 제품 제외 </template>
+						<template #disclaimer> 일부 제품 제외 </template>
 					</BenefitItem>
 				</li>
 				<li>

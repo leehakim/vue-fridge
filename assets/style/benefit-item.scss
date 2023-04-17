@@ -72,10 +72,23 @@
     letter-spacing: -0.025em;
     line-height: 1;
     text-decoration: none;
+    &::after {
+      content: '>';
+      display: inline-block;
+      margin-left: vw-pc(2);
+    }
   }
   .disclaimer {
+    position: relative;
+    padding-left: .8em;
     font-size: vw-pc(14);
     letter-spacing: -0.025em;
     line-height: vw-pc(18);
+    &::before {
+      content: '*';
+      position: absolute;
+      left: 0;
+      font-size: inherit;
+    }
   }
 }
