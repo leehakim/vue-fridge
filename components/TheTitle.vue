@@ -6,7 +6,7 @@
 		</picture>
 		<div class="text-box">
 			<p class="tit">
-				<span class="en-b">2022</span> 삼성전자 <br class="m_show" />신상 컬렉션
+				<span class="en-b">2022</span> 삼성전자 <br class="m-show" />신상 컬렉션
 			</p>
 			<p class="desc">
 				올해 새롭게 선보이는 삼성 TV부터 BESPOKE 주방가전, 생활가전까지
