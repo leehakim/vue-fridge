@@ -20,8 +20,8 @@
 export default {
 	props: {
 		idx: {
-			type: string,
-			default: 1,
+			type: String,
+			default: '1',
 		},
 	},
 	setup(props) {
