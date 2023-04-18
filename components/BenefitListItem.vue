@@ -1,11 +1,11 @@
 <template>
-	<div class="benefit-item">
+	<div class="benefit-list-item">
 		<picture>
 			<source
-				srcset="/benefit_bg_01_pc.png"
+				:srcset="'/benefit_bg_0' + idx + '_pc.png'"
 				media="all and (min-width: 769px)"
 			/>
-			<img src="/benefit_bg_01_pc.png" alt="" />
+			<img :src="'/benefit_bg_0' + idx + '_mo.png'" alt="" />
 		</picture>
 		<div class="tag">
 			<p><slot name="tag"></slot></p>
@@ -14,7 +14,6 @@
 			<p class="tit"><slot name="tit"></slot></p>
 			<p class="copy">
 				<slot name="copy"></slot>
-				{{ bgImg }}
 			</p>
 			<a v-if="$slots.cta" href="" class="cta"><slot name="cta"></slot></a>
 			<p v-if="$slots.disclaimer" class="disclaimer">
@@ -27,9 +26,9 @@
 <script>
 export default {
 	props: {
-		bgImg: {
-			type: String,
-			default: '',
+		idx: {
+			type: Number,
+			default: 1,
 		},
 	},
 	setup(props) {

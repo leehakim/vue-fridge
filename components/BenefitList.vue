@@ -4,7 +4,7 @@
 			<p class="title">런칭 구매 혜택</p>
 			<ul>
 				<li>
-					<BenefitItem>
+					<BenefitListItem idx="1">
 						<template #tag> 런칭<br />혜택 </template>
 						<template #tit> 4만P 지급 </template>
 						<template #copy>
@@ -15,34 +15,37 @@
 						<template #disclaimer>
 							삼성전자 멤버십 구매 금액대별<br />포인트 적립 기준
 						</template>
-					</BenefitItem>
+					</BenefitListItem>
 				</li>
 				<li>
-					<BenefitItem>
+					<BenefitListItem idx="2">
 						<template #tag> 전문<br />설치 </template>
 						<template #tit> 삼성닷컴 혜택 </template>
 						<template #copy> 고객이 원하는 배송일<br />지정 서비스 </template>
 						<template #disclaimer> 일부 제품 제외 </template>
-					</BenefitItem>
+					</BenefitListItem>
 				</li>
 				<li>
-					<BenefitItem>
+					<BenefitListItem idx="3">
 						<template #tag> 배송<br />무료 </template>
 						<template #tit> 삼성닷컴 혜택 </template>
 						<template #copy>
 							삼성닷컴 제품 구매 시<br />전제품 배송 무료
 						</template>
-					</BenefitItem>
+					</BenefitListItem>
 				</li>
 			</ul>
+			<div class="center-box">
+				<a class="btn-toggle" href="#">혜택 유의사항을 꼭 확인하세요</a>
+			</div>
 		</div>
 	</section>
 </template>
 
 <script>
-import BenefitItem from './BenefitItem.vue';
+import BenefitListItem from './BenefitListItem.vue';
 export default {
-	components: { BenefitItem },
+	components: { BenefitListItem },
 	setup() {
 		return {};
 	},
@@ -51,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .benefit {
-	margin-top: vw-pc(100);
+	margin: vw-pc(100) auto vw-pc(92);
 	.section-container {
 		padding: 0 vw-pc(60);
 	}
@@ -64,6 +67,19 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		margin-top: vw-pc(40);
+	}
+	.center-box {
+		margin-top: vw-pc(40);
+		text-align: center;
+	}
+	.btn-toggle {
+		display: inline-block;
+		border-bottom: 1px solid #000;
+		color: #000;
+		font-size: vw-pc(18);
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		line-height: vw-pc(29);
 	}
 }
 </style>
