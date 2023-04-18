@@ -5,5 +5,6 @@
 		<KeyVisual />
 		<BenefitList />
 		<Info />
+		<MembershipList />
 	</div>
 </template>

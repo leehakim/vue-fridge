@@ -1,0 +1,27 @@
+.membership-list-item{
+  position: relative;
+  width: vw-pc(312);
+  .text-box{
+    position: absolute;
+    top: vw-pc(40);
+    left: vw-pc(30);
+    .tit{
+      font-size: vw-pc(24);
+      font-weight: 700;
+      line-height: vw-pc(36);
+    }
+    .disclaimer {
+      position: relative;
+      padding-left: .8em;
+      font-size: vw-pc(14);
+      letter-spacing: -0.025em;
+      line-height: vw-pc(18);
+      &::before {
+        content: '*';
+        position: absolute;
+        left: 0;
+        font-size: inherit;
+      }
+    }
+  }
+}
