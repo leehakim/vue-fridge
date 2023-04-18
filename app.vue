@@ -4,5 +4,6 @@
 		<TheTabs />
 		<KeyVisual />
 		<BenefitList />
+		<Info />
 	</div>
 </template>

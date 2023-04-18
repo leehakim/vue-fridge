@@ -12,6 +12,10 @@ picture {
     width: 100%;
   }
 }
+a {
+  text-decoration: none;
+  color: #000;
+}
 em {
   font-style: normal;
 }
@@ -78,6 +82,10 @@ button {
       width: vw-pc(1440);
       margin: auto;
     }
+  }
+
+  .inner_1320 {
+    max-width: 1320px; margin: 0 auto;  position: relative;
   }
 }
 
