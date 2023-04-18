@@ -4,7 +4,8 @@
 		<TheTabs />
 		<KeyVisual />
 		<BenefitList />
-		<Info />
+		<IntroProduct />
+		<PhotoEvent />
 		<MembershipList />
 	</div>
 </template>
