@@ -36,7 +36,12 @@
 				</li>
 			</ul>
 			<div class="center-box">
-				<a class="btn-toggle" href="#">혜택 유의사항을 꼭 확인하세요</a>
+				<button class="toggle-btn" @click="show = !show">
+					혜택 유의사항을 꼭 확인하세요
+				</button>
+				<div v-if="show" class="toggle-contents">
+					<p>혜택 유의 사항</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -47,7 +52,8 @@ import BenefitListItem from './BenefitListItem.vue';
 export default {
 	components: { BenefitListItem },
 	setup() {
-		return {};
+		const show = ref(false);
+		return { show };
 	},
 };
 </script>
@@ -72,7 +78,7 @@ export default {
 		margin-top: vw-pc(40);
 		text-align: center;
 	}
-	.btn-toggle {
+	.toggle-btn {
 		display: inline-block;
 		border-bottom: 1px solid #000;
 		color: #000;
@@ -80,6 +86,9 @@ export default {
 		font-weight: 700;
 		letter-spacing: -0.025em;
 		line-height: vw-pc(29);
+		&::after {
+			content: '>';
+		}
 	}
 }
 </style>
