@@ -97,7 +97,7 @@ export default {
 				bottom: vw-pc(9);
 				width: 6px;
 				height: 10px;
-				background: url('/public/arrow_right_pc.png') no-repeat center;
+				background: url('/arrow_right_pc.png') no-repeat center;
 			}
 		}
 	}
