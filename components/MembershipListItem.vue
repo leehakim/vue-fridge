@@ -20,7 +20,7 @@
 export default {
 	props: {
 		idx: {
-			type: Number,
+			type: string,
 			default: 1,
 		},
 	},
