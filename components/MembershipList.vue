@@ -32,6 +32,11 @@
 						>
 					</MembershipListItem>
 				</li>
+				<li>
+					<MembershipListItem idx="5">
+						<template #tit>#YouMake 프로젝트</template>
+					</MembershipListItem>
+				</li>
 			</ul>
 			<div class="center-box">
 				<a class="btn-toggle" href="#">혜택 유의사항을 꼭 확인하세요</a>
@@ -104,6 +109,7 @@ export default {
 	ul {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-top: vw-pc(40);
 		li {
 			border-radius: vw-pc(10);
@@ -118,6 +124,14 @@ export default {
 			}
 			&:nth-child(4) {
 				background: #c0d6f4;
+			}
+			&:last-child {
+				margin-top: vw-pc(24);
+				background: linear-gradient(to right, #8ad1e7, #76c1d9);
+				div {
+					width: vw-pc(1320);
+					height: vw-pc(300);
+				}
 			}
 		}
 	}
