@@ -1,20 +1,20 @@
 <template>
 	<section class="sec_info">
-		<div class="inner_1320">
+		<div class="section-container">
 			<div class="title_box">
 				<p><strong>BESPOKE,</strong> 와인 전문 냉장고를 소개합니다</p>
 				<a href="javascript:;" class="detail_btn">제품 자세히 보기</a>
 			</div>
-			<swiper class="swiper" :options="swiperOption">
+			<swiper class="swiper" slidesPerView="auto">
 				<SwiperSlide  v-for="(group, idx) in groupList" :key="idx">
 					{{ group.item }}
 					<div class="slide_list">
 						<picture>
-							<img :src="'/intro_slide' + index + '_pc.png'">
+							<img :src="'/intro_slide' + idx + '_pc.png'">
 						</picture>
 						<div class="contents_area">
 							<picture>
-								<img :src="'/intro_slide_ico' + index + '_pc.png'">
+								<img :src="'/intro_slide_ico' + idx + '_pc.png'">
 							</picture>
 							<div class="txt_box">
 								<p class="main_txt">
@@ -46,10 +46,7 @@ export default {
 		SwiperSlide,
 	},
 	methods : {
-		index: {
-			type: String,
-			default: '1',
-		},
+		
 	},
 	setup() {
 		return {
@@ -61,7 +58,9 @@ export default {
 
 <style lang="scss">
 .sec_info {
-	nuxt-link {width: 100%;}
+	.section-container {
+		padding: 0 vw-pc(60);
+	}
 	.title_box {
 		display: flex;
 		align-items: center;
@@ -87,8 +86,8 @@ export default {
 		}
 	}
 	.swiper-slide {
-		width: vw-pc(536) !important;
-		margin-right: vw-pc(24);
+		width: vw-pc(536);
+		&:not(:last-child) {margin-right: vw-pc(24);}
 		.slide_list {
 			> picture {
 				margin-bottom: vw-pc(25);
