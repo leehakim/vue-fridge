@@ -1,5 +1,5 @@
 <template>
-	<div class="membership-list-item">
+	<div class="membership_list_item">
 		<picture>
 			<source
 				:srcset="'/membership_bg_0' + idx + '_pc.png'"
@@ -7,7 +7,7 @@
 			/>
 			<img :src="'/membership_bg_0' + idx + '_mo.png'" alt="" />
 		</picture>
-		<div class="text-box">
+		<div class="text_box">
 			<p class="tit"><slot name="tit"></slot></p>
 			<p class="copy">
 				<slot name="copy"></slot>

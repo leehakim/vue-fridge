@@ -1,9 +1,9 @@
 <template>
 	<section class="section membership">
-		<div class="section-container">
+		<div class="section_container">
 			<p class="title">삼성닷컴 회원 혜택 모두보기</p>
-			<div class="btn-wrap">
-				<a href="#" class="sign-up">회원 가입하기</a>
+			<div class="btn_wrap">
+				<a href="#" class="sign_up">회원 가입하기</a>
 				<a href="#" class="more">더 많은 혜택 보러가기</a>
 			</div>
 			<ul>
@@ -35,7 +35,7 @@
 				<li>
 					<MembershipListItem idx="5">
 						<template #tit
-							><span class="en-b">#YouMake</span> 프로젝트</template
+							><span class="en_b">#YouMake</span> 프로젝트</template
 						>
 						<template #copy>
 							내 라이프스타일에 딱 맞는 나만의 제품을 만나보세요<br />오직
@@ -45,8 +45,8 @@
 					</MembershipListItem>
 				</li>
 			</ul>
-			<div class="center-box">
-				<a class="btn-toggle" href="#">혜택 유의사항을 꼭 확인하세요</a>
+			<div class="center_box">
+				<a class="btn_toggle" href="#">혜택 유의사항을 꼭 확인하세요</a>
 			</div>
 		</div>
 	</section>
