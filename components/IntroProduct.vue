@@ -3,7 +3,7 @@
 		<div class="section-container">
 			<div class="title_box">
 				<p><strong>BESPOKE,</strong> 와인 전문 냉장고를 소개합니다</p>
-				<a href="javascript:;" class="detail_btn">제품 자세히 보기</a>
+				<nuxt-link to="javascript:;" class="detail_btn">제품 자세히 보기</nuxt-link>
 			</div>
 			<swiper slidesPerView="auto" class="swiper" v-bind="swiperOptions">
 				<SwiperSlide  v-for="(group, idx) in groupList" :key="idx">
@@ -49,7 +49,6 @@ SwiperCore.use([Pagination, Navigation]);
 import JasonData from '/json-data/IntroData.json';
 
 let groupList = JasonData;
-let isNavi = true;
 
 export default {
 	components: {
@@ -57,9 +56,6 @@ export default {
 		SwiperSlide,
 	},
 	methods : {
-		naviMove() {
-			this.navigation.parent().append()
-		}
 	},
 	setup() {
 		return {
