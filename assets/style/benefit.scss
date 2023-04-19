@@ -1,18 +1,32 @@
-.benefit-list-item {
+.benefit {
+	margin: vw-pc(100) auto vw-pc(92);
+	.section-container {
+		padding: 0 vw-pc(60);
+	}
+	.title {
+		margin-bottom: vw-pc(40);
+		font-size: vw-pc(40);
+		font-weight: 700;
+		letter-spacing: -0.025em;
+	}
+
+  .benefit-list-item {
 	position: relative;
 	width: vw-pc(424);
-	// height: vw-pc(270);
-	background-color: #f8f8f8;
+	padding-top: vw-pc(7);
 	border-radius: vw-pc(10);
+	picture {
+		background-color: #f8f8f8;
+	}
 	.tag {
 		position: absolute;
-		top: vw-pc(-7);
+		top: 0;
 		right: vw-pc(11);
 		&::before {
 			content: '';
 			display: block;
 			position: absolute;
-			top: vw-pc(-7);
+			top: vw-pc(-6);
 			right: vw-pc(-4);
 			width: 0;
 			height: 0;
@@ -35,11 +49,12 @@
 			font-weight: 700;
 			letter-spacing: -0.025em;
 			line-height: vw-pc(20);
+			white-space: pre-line;
 		}
 	}
 	.text-box {
 		position: absolute;
-		top: vw-pc(25);
+		top: vw-pc(32);
 		left: vw-pc(30);
 	}
 	.tit {
@@ -61,6 +76,7 @@
 		font-weight: 700;
 		letter-spacing: -0.025em;
 		line-height: vw-pc(30);
+		white-space: pre-line;
 	}
   .cta {
     display: inline-block;
@@ -84,11 +100,37 @@
     font-size: vw-pc(14);
     letter-spacing: -0.025em;
     line-height: vw-pc(18);
+		white-space: pre-line;
     &::before {
       content: '*';
       position: absolute;
       left: 0;
       font-size: inherit;
     }
+  }
+}
+	.center-box {
+		margin-top: vw-pc(40);
+		text-align: center;
+	}
+	.toggle-btn {
+		display: inline-block;
+		border-bottom: 1px solid #000;
+		color: #000;
+		font-size: vw-pc(18);
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		line-height: vw-pc(29);
+		&::after {
+			content: '>';
+		}
+	}
+}
+@media (max-width: 768px) {
+  .benefit {
+.title {
+		margin-bottom: vw-mo(50);
+		font-size: vw-mo(44);
+	}
   }
 }

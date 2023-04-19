@@ -96,4 +96,11 @@ button {
   .m-hide {
     display: none;
   }
+  #fridge {
+    section {
+      .section-container {
+        width: 100%;
+      }
+    }
+  }
 }
