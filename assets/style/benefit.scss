@@ -1,119 +1,118 @@
 .benefit {
 	margin: vw-pc(100) auto vw-pc(92);
-	.section-container {
+	.section_container {
 		padding: 0 vw-pc(60);
 	}
 	.title {
-		margin-bottom: vw-pc(40);
+		margin: 0 0 vw-pc(40);
 		font-size: vw-pc(40);
 		font-weight: 700;
 		letter-spacing: -0.025em;
 	}
-
-  .benefit-list-item {
-	position: relative;
-	width: vw-pc(424);
-	padding-top: vw-pc(7);
-	border-radius: vw-pc(10);
-	picture {
-		background-color: #f8f8f8;
-	}
-	.tag {
-		position: absolute;
-		top: 0;
-		right: vw-pc(11);
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			top: vw-pc(-6);
-			right: vw-pc(-4);
-			width: 0;
-			height: 0;
-			border-bottom: vw-pc(7) solid #670a0e;
-			border-top: vw-pc(7) solid transparent;
-			border-left: vw-pc(7) solid transparent;
-			border-right: vw-pc(7) solid transparent;
-		}
-		p {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			width: vw-pc(58);
-			height: vw-pc(56);
-			background-color: #ae3438;
-			border-radius: vw-pc(3);
-			color: #fff;
-			font-size: vw-pc(15);
-			font-weight: 700;
-			letter-spacing: -0.025em;
-			line-height: vw-pc(20);
-			white-space: pre-line;
-		}
-	}
-	.text-box {
-		position: absolute;
-		top: vw-pc(32);
-		left: vw-pc(30);
-	}
-	.tit {
-		display: inline-flex;
-		align-items: center;
-		height: vw-pc(20);
-		padding: 0 vw-pc(5);
-		background-color: #000;
-		border-radius: vw-pc(3);
-		color: #fff;
-		font-size: vw-pc(14);
-		font-weight: 700;
-		letter-spacing: -0.025em;
-		line-height: 1.3;
-	}
-	.copy {
-		margin: vw-pc(15) 0;
-		font-size: vw-pc(25);
-		font-weight: 700;
-		letter-spacing: -0.025em;
-		line-height: vw-pc(30);
-		white-space: pre-line;
-	}
-  .cta {
-    display: inline-block;
-    margin-bottom: vw-pc(64);
-    border-bottom: 1px solid #000;
-    color: #000;
-    font-size: vw-pc(16);
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1;
-    text-decoration: none;
-    &::after {
-      content: '>';
-      display: inline-block;
-      margin-left: vw-pc(2);
-    }
-  }
-  .disclaimer {
+  .benefit_list_item {
     position: relative;
-    padding-left: .8em;
-    font-size: vw-pc(14);
-    letter-spacing: -0.025em;
-    line-height: vw-pc(18);
-		white-space: pre-line;
-    &::before {
-      content: '*';
+    width: vw-pc(424);
+    padding-top: vw-pc(7);
+    border-radius: vw-pc(10);
+    .img_box {
+      background-color: #f8f8f8;
+    }
+    .tag {
       position: absolute;
-      left: 0;
-      font-size: inherit;
+      top: 0;
+      right: vw-pc(11);
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: vw-pc(-6);
+        right: vw-pc(-4);
+        width: 0;
+        height: 0;
+        border-bottom: vw-pc(7) solid #670a0e;
+        border-top: vw-pc(7) solid transparent;
+        border-left: vw-pc(7) solid transparent;
+        border-right: vw-pc(7) solid transparent;
+      }
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: vw-pc(58);
+        height: vw-pc(56);
+        background-color: #ae3438;
+        border-radius: vw-pc(3);
+        color: #fff;
+        font-size: vw-pc(15);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: vw-pc(20);
+        white-space: pre-line;
+      }
+    }
+    .text_box {
+      position: absolute;
+      top: vw-pc(32);
+      left: vw-pc(30);
+    }
+    .tit {
+      display: inline-flex;
+      align-items: center;
+      height: vw-pc(20);
+      padding: 0 vw-pc(5);
+      background-color: #000;
+      border-radius: vw-pc(3);
+      color: #fff;
+      font-size: vw-pc(14);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.3;
+    }
+    .copy {
+      margin: vw-pc(15) 0;
+      font-size: vw-pc(25);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: vw-pc(30);
+      white-space: pre-line;
+    }
+    .cta {
+      display: inline-block;
+      margin-bottom: vw-pc(64);
+      border-bottom: 1px solid #000;
+      color: #000;
+      font-size: vw-pc(16);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1;
+      text-decoration: none;
+      &::after {
+        content: '>';
+        display: inline-block;
+        margin-left: vw-pc(2);
+      }
+    }
+    .disclaimer {
+      position: relative;
+      padding-left: .8em;
+      font-size: vw-pc(14);
+      letter-spacing: -0.025em;
+      line-height: vw-pc(18);
+      white-space: pre-line;
+      &::before {
+        content: '*';
+        position: absolute;
+        left: 0;
+        font-size: inherit;
+      }
     }
   }
-}
-	.center-box {
+	.center_box {
 		margin-top: vw-pc(40);
 		text-align: center;
 	}
-	.toggle-btn {
+	.toggle_btn {
 		display: inline-block;
 		border-bottom: 1px solid #000;
 		color: #000;
@@ -128,9 +127,56 @@
 }
 @media (max-width: 768px) {
   .benefit {
-.title {
-		margin-bottom: vw-mo(50);
-		font-size: vw-mo(44);
-	}
+    margin: vw-mo(80) auto vw-mo(120);
+    .section_container {
+      padding: 0;
+    }
+    .title {
+      margin: 0 vw-mo(60) vw-mo(50);
+      font-size: vw-mo(44);
+    }
+    .benefit_list-_tem {
+      width: vw-mo(378);
+      padding-top: vw-mo(10);
+      border-radius: vw-mo(10);
+      .tag {
+        right: vw-mo(14);
+        &::before {
+          top: vw-mo(-9);
+          right: vw-mo(-4);
+          border-bottom: vw-mo(7) solid #670a0e;
+          border-top: vw-mo(7) solid transparent;
+          border-left: vw-mo(7) solid transparent;
+          border-right: vw-mo(7) solid transparent;
+        }
+        p {
+          width: vw-mo(68);
+          height: vw-mo(62);
+          border-radius: vw-mo(4);
+          font-size: vw-mo(20);
+          line-height: vw-mo(24);
+        }
+      }
+      .text_box {
+        top: vw-mo(21);
+        left: vw-mo(22);
+      }
+      .tit {
+        height: vw-mo(24);
+        padding: 0 vw-mo(5);
+        border-radius: vw-mo(3);
+        font-size: vw-mo(16);
+      }
+      .copy {
+        margin: vw-mo(18) 0 vw-mo(20);
+      }
+    }
+    .center_box {
+      margin-top: vw-mo(59);
+    }
+    .toggle_btn {
+      font-size: vw-mo(20);
+      line-height: vw-mo(29);
+    }
   }
 }
