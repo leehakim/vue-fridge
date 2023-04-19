@@ -1,14 +1,14 @@
 .benefit {
-	margin: vw-pc(100) auto vw-pc(92);
-	.section_container {
-		padding: 0 vw-pc(60);
-	}
-	.title {
-		margin: 0 0 vw-pc(40);
-		font-size: vw-pc(40);
-		font-weight: 700;
-		letter-spacing: -0.025em;
-	}
+  margin: vw-pc(100) auto vw-pc(92);
+  .section_container {
+    padding: 0 vw-pc(60);
+  }
+  .title {
+    margin: 0 0 vw-pc(40);
+    font-size: vw-pc(40);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
   .benefit_list_item {
     position: relative;
     width: vw-pc(424);
@@ -22,7 +22,7 @@
       top: 0;
       right: vw-pc(11);
       &::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: vw-pc(-6);
@@ -88,42 +88,43 @@
       line-height: 1;
       text-decoration: none;
       &::after {
-        content: '>';
+        content: ">";
         display: inline-block;
         margin-left: vw-pc(2);
       }
     }
     .disclaimer {
       position: relative;
-      padding-left: .8em;
+      padding-left: 0.8em;
+      color: #666;
       font-size: vw-pc(14);
       letter-spacing: -0.025em;
       line-height: vw-pc(18);
       white-space: pre-line;
       &::before {
-        content: '*';
+        content: "*";
         position: absolute;
         left: 0;
         font-size: inherit;
       }
     }
   }
-	.center_box {
-		margin-top: vw-pc(40);
-		text-align: center;
-	}
-	.toggle_btn {
-		display: inline-block;
-		border-bottom: 1px solid #000;
-		color: #000;
-		font-size: vw-pc(18);
-		font-weight: 700;
-		letter-spacing: -0.025em;
-		line-height: vw-pc(29);
-		&::after {
-			content: '>';
-		}
-	}
+  .center_box {
+    margin-top: vw-pc(40);
+    text-align: center;
+  }
+  .toggle_btn {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-size: vw-pc(18);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: vw-pc(29);
+    &::after {
+      content: ">";
+    }
+  }
 }
 @media (max-width: 768px) {
   .benefit {
@@ -135,7 +136,10 @@
       margin: 0 vw-mo(60) vw-mo(50);
       font-size: vw-mo(44);
     }
-    .benefit_list-_tem {
+    .swiper-slide + .swiper-slide {
+      margin-left: vw-mo(24);
+    }
+    .benefit_list_item {
       width: vw-mo(378);
       padding-top: vw-mo(10);
       border-radius: vw-mo(10);
@@ -169,6 +173,19 @@
       }
       .copy {
         margin: vw-mo(18) 0 vw-mo(20);
+        font-size: vw-mo(24);
+        line-height: vw-mo(32);
+      }
+      .cta {
+        margin-bottom: vw-mo(17);
+        font-size: vw-mo(20);
+        &::after {
+          margin-left: vw-mo(2);
+        }
+      }
+      .disclaimer {
+        font-size: vw-mo(18);
+        line-height: vw-mo(26);
       }
     }
     .center_box {
