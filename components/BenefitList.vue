@@ -1,17 +1,17 @@
 <template>
 	<section class="section benefit">
-		<div class="section-container">
+		<div class="section_container">
 			<p class="title">런칭 구매 혜택</p>
 			<swiper :slides-per-view="3">
 				<SwiperSlide v-for="benefit in benefits" :key="benefit.idx">
 					<BenefitListItem :benefit="benefit"></BenefitListItem>
 				</SwiperSlide>
 			</swiper>
-			<div class="center-box">
-				<button class="toggle-btn" @click="show = !show">
+			<div class="center_box">
+				<button class="toggle_btn" @click="show = !show">
 					혜택 유의사항을 꼭 확인하세요
 				</button>
-				<div v-if="show" class="toggle-contents">
+				<div v-if="show" class="toggle_contents">
 					<p>혜택 유의 사항</p>
 				</div>
 			</div>
