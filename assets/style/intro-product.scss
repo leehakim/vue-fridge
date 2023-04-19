@@ -1,4 +1,4 @@
-.sec_info {
+.sec_intro {
 	.section-container {
 		padding: 0 vw-pc(60);
 	}
@@ -26,6 +26,8 @@
 			letter-spacing: vw-pc(-1);
 		}
 	}
+
+    // swiper setting
 	.swiper-slide {
 		width: vw-pc(536);
 		&:not(:last-child) {margin-right: vw-pc(24);}
@@ -83,4 +85,18 @@
 			width: vw-pc(50);
 		}
 	}
+
+    // swiper navigation set
+    .swiper-button-prev, .swiper-button-next {
+        color: #000; top: 40%; 
+    }
+    .swiper-button-prev {
+        left: 13%;
+    }
+    .swiper-button-next {
+        right: 13%;
+    }
+    .swiper-button-prev:after, .swiper-button-next::after {
+        font-size: vw-pc(24); font-weight: 700;
+    }
 }
