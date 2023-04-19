@@ -58,20 +58,32 @@
       .membership-list-item{
         position: relative;
         width: vw-pc(312);
-        .text-box{
+        .text-box {
           position: absolute;
           top: vw-pc(40);
           left: vw-pc(30);
-          .tit{
+          .tit {
             font-size: vw-pc(24);
             font-weight: 700;
             line-height: vw-pc(36);
           }
-          .copy{
+          .copy {
             font-size: vw-pc(18);
             font-weight: 400;
             line-height: vw-pc(32);
             letter-spacing: -0.025em;
+          }
+          .cta {
+            width: vw-pc(127);
+            height: vw-pc(38);
+            margin-top: vw-pc(20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: vw-pc(19);
+            background: #000000;
+            font-size: vw-pc(16);
+            color: #ffffff;
           }
           .disclaimer {
             position: relative;

@@ -12,6 +12,7 @@
 			<p class="copy">
 				<slot name="copy"></slot>
 			</p>
+			<a v-if="$slots.cta" href="#" class="cta"><slot name="cta"></slot></a>
 			<p v-if="$slots.disclaimer" class="disclaimer">
 				<slot name="disclaimer"></slot>
 			</p>
