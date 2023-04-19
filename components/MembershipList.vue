@@ -3,8 +3,8 @@
 		<div class="section-container">
 			<p class="title">삼성닷컴 회원 혜택 모두보기</p>
 			<div class="btn-wrap">
-				<a href="javascript:;" class="sign-up">회원 가입하기</a>
-				<a href="javascript:;" class="more">더 많은 혜택 보러가기</a>
+				<a href="#" class="sign-up">회원 가입하기</a>
+				<a href="#" class="more">더 많은 혜택 보러가기</a>
 			</div>
 			<ul>
 				<li>
@@ -34,11 +34,14 @@
 				</li>
 				<li>
 					<MembershipListItem idx="5">
-						<template #tit>#YouMake 프로젝트</template>
+						<template #tit
+							><span class="en-b">#YouMake</span> 프로젝트</template
+						>
 						<template #copy>
 							내 라이프스타일에 딱 맞는 나만의 제품을 만나보세요<br />오직
 							당신만을 위한 새로운 경험이 펼쳐집니다
 						</template>
+						<template #cta>더 알아보기</template>
 					</MembershipListItem>
 				</li>
 			</ul>
