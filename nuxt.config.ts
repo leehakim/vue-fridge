@@ -1,5 +1,5 @@
 import { NuxtConfig } from '@nuxt/types';
-import { createWebHistory } from 'vue-router';
+import { createMemoryHistory } from 'vue-router';
 
 const defineNuxtConfig: NuxtConfig = {
   css: ['~/assets/style/fonts.scss', '~/assets/style/common.scss'],
@@ -13,7 +13,7 @@ const defineNuxtConfig: NuxtConfig = {
     },
   },
   router: {
-    history: createWebHistory(),
+    history: createMemoryHistory(),
     routes: [],
     extendRoutes(routes) {
       routes.push({
