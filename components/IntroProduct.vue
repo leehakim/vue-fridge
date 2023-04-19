@@ -1,11 +1,11 @@
 <template>
-	<section class="sec_info">
+	<section class="sec_intro">
 		<div class="section-container">
 			<div class="title_box">
 				<p><strong>BESPOKE,</strong> 와인 전문 냉장고를 소개합니다</p>
 				<a href="javascript:;" class="detail_btn">제품 자세히 보기</a>
 			</div>
-			<swiper class="swiper" slidesPerView="auto">
+			<swiper slidesPerView="auto" class="swiper">
 				<SwiperSlide  v-for="(group, idx) in groupList" :key="idx">
 					{{ group.item }}
 					<div class="slide_list">
@@ -22,6 +22,9 @@
 								</p>
 								<p class="sub_txt">
 									{{ group.SubTxt }}
+								</p>
+								<p class="add_txt">
+									{{ group.AddTxt }}
 								</p>
 							</div>
 						</div>
@@ -57,90 +60,5 @@ export default {
 </script>
 
 <style lang="scss">
-.sec_info {
-	.section-container {
-		padding: 0 vw-pc(60);
-	}
-	.title_box {
-		display: flex;
-		align-items: center;
-		margin-bottom: vw-pc(35);
-		p {
-			margin-right: vw-pc(20);
-			font-size: vw-pc(26);
-			line-height: vw-pc(36);
-		}
-		.detail_btn {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: vw-pc(158);
-			height: vw-pc(38);
-			background-color: #000;
-			font-size: vw-pc(18);
-			line-height: vw-pc(32);
-			border-radius: vw-pc(19);
-			color: #fff;
-			font-weight: 700;
-			letter-spacing: vw-pc(-1);
-		}
-	}
-	.swiper-slide {
-		width: vw-pc(536);
-		&:not(:last-child) {margin-right: vw-pc(24);}
-		.slide_list {
-			> picture {
-				margin-bottom: vw-pc(25);
-			}
-			.contents_area {
-				display: flex;
-				> picture {
-					margin-right: vw-pc(20);
-				}
-				.txt_box {
-					.main_txt {
-						margin-bottom: vw-pc(10);
-						font-size: vw-pc(24);
-						line-height: vw-pc(26);
-						letter-spacing: vw-pc(-1);
-						font-weight: 700;
-					}
-					.sub_txt {
-						margin-bottom: vw-pc(20);
-						font-size: vw-pc(16);
-						line-height: vw-pc(26);
-						letter-spacing: vw-pc(-1);
-					}
-					.add_txt {
-						font-size: vw-pc(14);
-						line-height: vw-pc(22);
-						letter-spacing: vw-pc(-2.5);
-						color: #717171;
-					}
-				}
-			}
-		}
-		&:nth-child(1) .contents_area picture {
-			width: vw-pc(32);
-		}
-		&:nth-child(2) .contents_area picture {
-			width: vw-pc(15);
-		}
-		&:nth-child(3) .contents_area picture {
-			width: vw-pc(22);
-		}
-		&:nth-child(4) .contents_area picture {
-			width: vw-pc(55);
-		}
-		&:nth-child(5) .contents_area picture {
-			width: vw-pc(15);
-		}
-		&:nth-child(6) .contents_area picture {
-			width: vw-pc(44);
-		}
-		&:nth-child(7) .contents_area picture {
-			width: vw-pc(50);
-		}
-	}
-}
+@import '@/assets/style/intro-product.scss';
 </style>
