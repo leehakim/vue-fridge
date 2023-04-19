@@ -2,22 +2,20 @@
 	<div class="benefit-list-item">
 		<picture>
 			<source
-				:srcset="'/benefit_bg_0' + idx + '_pc.png'"
+				:srcset="'/benefit_bg_0' + benefit.idx + '_pc.png'"
 				media="all and (min-width: 769px)"
 			/>
-			<img :src="'/benefit_bg_0' + idx + '_mo.png'" alt="" />
+			<img :src="'/benefit_bg_0' + benefit.idx + '_mo.png'" alt="" />
 		</picture>
 		<div class="tag">
-			<p><slot name="tag"></slot></p>
+			<p>{{ benefit.tag }}</p>
 		</div>
 		<div class="text-box">
-			<p class="tit"><slot name="tit"></slot></p>
-			<p class="copy">
-				<slot name="copy"></slot>
-			</p>
-			<a v-if="$slots.cta" href="" class="cta"><slot name="cta"></slot></a>
-			<p v-if="$slots.disclaimer" class="disclaimer">
-				<slot name="disclaimer"></slot>
+			<p class="tit">{{ benefit.title }}</p>
+			<p class="copy">{{ benefit.copy }}</p>
+			<a v-if="benefit.cta" href="/" class="cta">{{ benefit.cta }}</a>
+			<p v-if="benefit.disclaimer" class="disclaimer">
+				{{ benefit.disclaimer }}
 			</p>
 		</div>
 	</div>
@@ -26,9 +24,18 @@
 <script>
 export default {
 	props: {
-		idx: {
-			type: String,
-			default: '1',
+		benefit: {
+			type: Object,
+			default() {
+				return {
+					idx: 1,
+					tag: 'tag',
+					title: 'title',
+					copy: 'copy',
+					cta: 'cta',
+					disclaimer: 'disclaimer',
+				};
+			},
 		},
 	},
 	setup(props) {
@@ -38,5 +45,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/style/benefit-item.scss';
+@import '@/assets/style/benefit.scss';
 </style>
