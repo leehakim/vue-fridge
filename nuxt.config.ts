@@ -16,6 +16,15 @@ const defineNuxtConfig: NuxtConfig = {
       },
     },
   },
+  rrouter: {
+    extendRoutes(routes) {
+      routes.push({
+        name: 'index',
+        path: '/',
+        component: '~/pages/index.vue'
+      });
+    }
+  }
 };
 
 export default defineNuxtConfig;
