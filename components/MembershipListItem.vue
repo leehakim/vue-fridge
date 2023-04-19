@@ -9,6 +9,9 @@
 		</picture>
 		<div class="text-box">
 			<p class="tit"><slot name="tit"></slot></p>
+			<p class="copy">
+				<slot name="copy"></slot>
+			</p>
 			<p v-if="$slots.disclaimer" class="disclaimer">
 				<slot name="disclaimer"></slot>
 			</p>

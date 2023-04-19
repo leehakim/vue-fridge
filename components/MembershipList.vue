@@ -35,6 +35,10 @@
 				<li>
 					<MembershipListItem idx="5">
 						<template #tit>#YouMake 프로젝트</template>
+						<template #copy>
+							내 라이프스타일에 딱 맞는 나만의 제품을 만나보세요<br />오직
+							당신만을 위한 새로운 경험이 펼쳐집니다
+						</template>
 					</MembershipListItem>
 				</li>
 			</ul>
