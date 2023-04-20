@@ -19,7 +19,7 @@ const defineNuxtConfig: NuxtConfig = {
       routes.push({
         name: "index",
         path: "/",
-        component: "~/pages/IndexPage.vue",
+        component: "~/pages/index.vue",
       });
     },
   },
