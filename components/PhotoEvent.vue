@@ -1,15 +1,15 @@
 <template>
-  <section class="sec_photo">
+  <section class="section sec_photo">
     <div class="section_container">
       <div class="aling_box">
         <div class="info_area">
           <div class="txt_box">
-            <div class="title-box">
+            <div class="title_box">
               <p class="main_txt">포토 상품평 이벤트</p>
               <p class="sub_txt">
                 <strong>BE</strong>SPOKE 1도어 와인냉장고의 리얼 후기를 삼성닷컴
-                포토상품평으로 남긴 후 이벤트 응모 시
-                <strong>전원 올리브영 3만원</strong> 상품권을 드립니다!
+                포토상품평으로<br>
+                남긴 후 이벤트 응모 시 <strong>전원 올리브영 3만원</strong> 상품권을 드립니다!
               </p>
             </div>
             <dl>
@@ -38,7 +38,18 @@
             </dl>
             <div class="btn_box">
               <nuxt-link to="#">응모하기</nuxt-link>
-              <button>포토 상품평 유의사항 보기</button>
+              <button
+              class="toggle_arrow toggle_btn"
+              :class="{ open: show }"
+              @click="show = !show"
+              >
+              혜택 유의사항을 꼭 확인하세요
+				      </button>
+              <div v-if="show">
+                <div class="toggle_contents">
+                  <p>혜택 유의 사항</p>
+                </div>
+              </div>
             </div>
           </div>
           <picture>
@@ -46,7 +57,7 @@
           </picture>
         </div>
         <div class="way_area">
-          <p>이벤트 응모방법</p>
+          <p class="small_title">이벤트 응모방법</p>
           <ul>
             <li>
               <picture>
@@ -90,7 +101,9 @@ export default {
   components: {},
 
   setup() {
-    return {};
+	const show = ref(false);
+    return {show};
   },
 };
 </script>
+

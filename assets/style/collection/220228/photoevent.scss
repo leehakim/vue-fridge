@@ -1,0 +1,70 @@
+.sec_photo {
+    .section_container {
+        padding: 0 vw-pc(60);
+        .aling_box{
+            display: flex;
+            justify-content: space-between;
+    
+            // 왼쪽영역
+            .info_area {
+                display: flex;
+                .txt_box {
+                    .title_box {
+                        .main_txt {
+                            font-size: vw-pc(42);
+                            letter-spacing: vw-pc(-2);
+                            font-weight: 700;
+                        }
+                        .sub_txt {
+                            font-size: vw-pc(16);
+                            line-height: vw-pc(32);
+                        }
+                    }
+                    dl {
+                        dt { 
+                            font-size: vw-pc(14);
+                            line-height: vw-pc(30);
+                            letter-spacing: vw-pc(-1);
+                            font-weight: 700;
+                        }
+                        dd {
+                            font-size: vw-pc(14);
+                            line-height: vw-pc(30);
+                            letter-spacing: vw-pc(-1);
+                        }
+                    }
+                    .btn_box {
+                        uext-link {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: vw-pc(106);
+                            height: vw-pc(38);
+                            border-radius: vw-pc(19);
+                            color: #fff;
+                            background-color: #000;
+                            font-size: vw-pc(16);
+                            line-height: vw-pc(36);
+                            letter-spacing: vw-pc(-1);
+                            font-weight: 700;
+                        }
+                        .toggle_btn {}
+                        .toggle_contents {
+                            p {}
+                        }
+                    }
+                }
+                > picture {
+                    width: vw-pc(187);
+                }
+            }
+    
+            // 오른쪽영역
+            .way_area {
+                .small_title {}
+                ul {display: flex;}
+            }
+        }
+    }
+    
+}

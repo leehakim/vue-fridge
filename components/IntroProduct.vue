@@ -10,7 +10,7 @@
           {{ group.item }}
           <div class="slide_list">
             <picture>
-              <img :src="'/intro_slide' + idx + '_pc.png'" />
+              <img :src="'/intro_slide' + idx + '_pc.png'"/>
             </picture>
             <div class="contents_area">
               <picture>
