@@ -2,20 +2,24 @@
   <section class="section benefit">
     <div class="section_container">
       <p class="title">런칭 구매 혜택</p>
-      <swiper
-        navigation
-        :slides-per-view="'auto'"
-        :space-between="24"
-        :modules="modules"
-        :free-mode="true"
-        :breakpoints="{ '769': { slidesPerView: 3, freeMode: false } }"
-        class="benefit_swiper"
-      >
-        <SwiperSlide v-for="benefit in benefits" :key="benefit.idx">
-          <BenefitListItem :benefit="benefit"></BenefitListItem>
-        </SwiperSlide>
-      </swiper>
-
+      <div class="benefit_swiper">
+        <swiper
+          :navigation="{
+            nextEl: `.benefit_swiper_next`,
+            prevEl: `.benefit_swiper_prev`,
+          }"
+          :slides-per-view="'auto'"
+          :space-between="24"
+          :modules="modules"
+          :breakpoints="{ '769': { slidesPerView: 3 } }"
+        >
+          <SwiperSlide v-for="benefit in benefits" :key="benefit.idx">
+            <BenefitListItem :benefit="benefit"></BenefitListItem>
+          </SwiperSlide>
+        </swiper>
+        <button class="benefit_swiper_next">next</button>
+        <button class="benefit_swiper_prev">prev</button>
+      </div>
       <div class="center_box">
         <button
           class="toggle_arrow toggle_btn"
@@ -38,10 +42,10 @@
 import BenefitListItem from "./BenefitListItem.vue";
 import BenefitData from "~/json-data/BenefitList.json";
 
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/scss/navigation";
-import { Navigation } from "swiper";
 
 export default {
   name: "BenefitList",
