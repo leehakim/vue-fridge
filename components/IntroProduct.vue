@@ -10,7 +10,7 @@
           {{ group.item }}
           <div class="slide_list">
             <picture>
-              <img :src="'/intro_slide' + idx + '_pc.png'" />
+              <img :src="'/intro_slide' + idx + '_pc.png'"/>
             </picture>
             <div class="contents_area">
               <picture>
@@ -45,9 +45,9 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 SwiperCore.use([Pagination, Navigation]);
 
-import JasonData from "/json-data/IntroData.json";
+import IntroData from "/json-data/IntroData.json";
 
-let groupList = JasonData;
+let groupList = IntroData;
 
 export default {
   components: {
@@ -60,8 +60,8 @@ export default {
       groupList,
       swiperOptions: {
         navigation: {
-          prevEl: ".swiper-button-prev",
-          nextEl: ".swiper-button-next",
+          prevEl: ".sec_intro .swiper-button-prev",
+          nextEl: ".sec_intro .swiper-button-next",
         },
       },
     };
