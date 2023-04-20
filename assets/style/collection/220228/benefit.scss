@@ -135,8 +135,10 @@
       margin: 0 vw-mo(60) vw-mo(50);
       font-size: vw-mo(44);
     }
-    .swiper-slide + .swiper-slide {
-      margin-left: vw-mo(24);
+    .benefit_swiper {
+      .swiper-wrapper {
+        margin: 0 vw-mo(60);
+      }
     }
     .benefit_list_item {
       width: vw-mo(378);
