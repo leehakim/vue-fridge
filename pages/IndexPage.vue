@@ -13,7 +13,11 @@ export default {
   data() {
     return {
       list: [
-        { id: 1, title: '2022 삼성전자 신상 컬렉션' , link : '/collection/Collection220228' },
+        {
+          id: 1,
+          title: "2022 삼성전자 신상 컬렉션",
+          link: "/collection/CollectionWine",
+        },
       ],
     };
   },

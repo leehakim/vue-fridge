@@ -18,6 +18,6 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-@import "@/assets/style/collection220228.scss";
+<style lang="scss">
+@import "@/assets/style/collectionWine.scss";
 </style>

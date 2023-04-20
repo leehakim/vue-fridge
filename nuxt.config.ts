@@ -1,8 +1,8 @@
-import { NuxtConfig } from '@nuxt/types';
-import { createWebHistory } from 'vue-router';
+import { NuxtConfig } from "@nuxt/types";
+import { createWebHistory, createMemoryHistory } from "vue-router";
 
 const defineNuxtConfig: NuxtConfig = {
-  css: ['~/assets/style/fonts.scss', '~/assets/style/common.scss'],
+  css: ["~/assets/style/fonts.scss", "~/assets/style/common.scss"],
   vite: {
     css: {
       preprocessorOptions: {
@@ -13,13 +13,13 @@ const defineNuxtConfig: NuxtConfig = {
     },
   },
   router: {
-    history: process.client ? createWebHistory() : null,
+    history: process.client ? createWebHistory() : createMemoryHistory(),
     routes: [],
     extendRoutes(routes) {
       routes.push({
-        name: 'index',
-        path: '/',
-        component: '~/pages/index.vue',
+        name: "index",
+        path: "/",
+        component: "~/pages/IndexPage.vue",
       });
     },
   },
