@@ -114,16 +114,15 @@
     text-align: center;
   }
   .toggle_btn {
-    display: inline-block;
     border-bottom: 1px solid #000;
     color: #000;
     font-size: vw-pc(18);
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: vw-pc(29);
-    &::after {
-      content: ">";
-    }
+  }
+  .toggle_contents {
+    padding: vw-pc(20);
   }
 }
 @media (max-width: 768px) {
