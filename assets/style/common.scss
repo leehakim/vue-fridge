@@ -3,6 +3,9 @@ html {
   padding: 0;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 picture {
   display: block;
   width: 100%;
@@ -20,6 +23,7 @@ em {
   font-style: normal;
 }
 p,
+dl,
 ul {
   margin: 0;
 }
@@ -115,10 +119,20 @@ button {
   .common_button.black_bg {
     color: #fff;
     background-color: #000;
+    &:hover {
+      background-color:transparent;
+      color: #000;
+      border: vw-pc(1) solid #000;
+    }
   }
   .common_button.white_bg {
     color: #000;
     background-color: #fff;
+    &:hover {
+      background-color:transparent;
+      color: #fff;
+      border: vw-pc(1) solid #fff;
+    }
   }
 
 }
