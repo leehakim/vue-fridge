@@ -105,6 +105,22 @@ button {
       transform: translateY(-50%) rotate(180deg);
     }
   }
+
+  .common_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .common_button.black_bg {
+    color: #fff;
+    background-color: #000;
+  }
+  .common_button.white_bg {
+    color: #000;
+    background-color: #fff;
+  }
+
 }
 
 @media (max-width: 768px) {
