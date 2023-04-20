@@ -4,9 +4,9 @@
       <source srcset="/title_bg_pc.png" media="all and (min-width: 769px)" />
       <img src="/title_bg_mo.png" alt="title bg" />
     </picture>
-    <div class="text-box">
+    <div class="text_box">
       <p class="tit">
-        <span class="en-b">2022</span> 삼성전자 <br class="m-show" />신상 컬렉션
+        <span class="en_b">2022</span> 삼성전자 <br class="m_show" />신상 컬렉션
       </p>
       <p class="desc">
         올해 새롭게 선보이는 삼성 TV부터 BESPOKE 주방가전, 생활가전까지
