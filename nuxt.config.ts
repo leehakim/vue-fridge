@@ -2,7 +2,7 @@ import { NuxtConfig } from "@nuxt/types";
 import { createWebHistory, createMemoryHistory } from "vue-router";
 
 const defineNuxtConfig: NuxtConfig = {
-  css: ["~/assets/style/fonts.scss", "~/assets/style/common.scss"],
+  // css: ["~/assets/style/fonts.scss", "~/assets/style/common.scss"],
   vite: {
     css: {
       preprocessorOptions: {

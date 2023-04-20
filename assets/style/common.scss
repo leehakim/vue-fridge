@@ -121,9 +121,17 @@ button {
     display: none;
   }
   #fridge {
-    section {
+    .section {
       .section_container {
-        width: 100%;
+        width: vw-mo(768);
+      }
+    }
+
+    .toggle_arrow {
+      padding-right: vw-mo(15);
+      &::after {
+        width: vw-mo(10);
+        height: vw-mo(6);
       }
     }
   }
