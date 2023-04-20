@@ -1,4 +1,4 @@
-body, 
+body,
 html {
   padding: 0;
   margin: 0;
@@ -56,19 +56,19 @@ button {
   width: 100%;
   margin: auto;
   background-color: #fff;
-  font-family: 'SamsungOne';
+  font-family: "SamsungOne";
   font-weight: 400;
   line-height: 1;
 
   .en_b {
-    font-family: 'SamsungSharpSans';
+    font-family: "SamsungSharpSans";
     font-weight: bold;
     letter-spacing: 0;
     line-height: 1;
   }
 
   .en_m {
-    font-family: 'SamsungSharpSans';
+    font-family: "SamsungSharpSans";
     font-weight: medium;
     letter-spacing: 0;
     line-height: 1;
@@ -84,8 +84,32 @@ button {
     }
   }
 
+  .toggle_arrow {
+    display: inline-block;
+    position: relative;
+    padding-right: vw-pc(15);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: vw-pc(10);
+      height: vw-pc(6);
+      background-image: url("/icon_arrow_down_pc.png");
+      background-size: contain;
+      background-position: 0 0;
+    }
+    &.open::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
   .inner_1320 {
-    max-width: 1320px; margin: 0 auto;  position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
   }
 }
 

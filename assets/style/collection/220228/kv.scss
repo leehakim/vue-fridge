@@ -1,5 +1,5 @@
 .kv {
-  .text-box {
+  .text_box {
     position: absolute;
     top: 50%;
     left: vw-pc(296);
@@ -21,7 +21,7 @@
 
 @media (max-width: 768px) {
   .kv {
-    .text-box {
+    .text_box {
       top: vw-mo(133);
       left: 0;
       transform: none;
