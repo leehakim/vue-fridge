@@ -30,7 +30,7 @@
         </button>
         <div v-if="show">
           <div class="toggle_contents">
-            <p>혜택 유의 사항</p>
+            <BenefitNotice />
           </div>
         </div>
       </div>
@@ -46,10 +46,11 @@ import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/scss/navigation";
+import BenefitNotice from "./BenefitNotice.vue";
 
 export default {
   name: "BenefitList",
-  components: { BenefitListItem, Swiper, SwiperSlide },
+  components: { BenefitListItem, Swiper, SwiperSlide, BenefitNotice },
   setup() {
     const show = ref(false);
     const benefits = BenefitData.benefit_list;

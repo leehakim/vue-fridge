@@ -1,0 +1,52 @@
+.notice {
+  padding: vw-pc(98) 0;
+  .notice_container {
+    display: flex;
+  }
+  .text_box {
+    position: relative;
+    width: 50%;
+    & + .text_box {
+      box-sizing: border-box;
+      padding-left: vw-pc(55);
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: vw-pc(-50);
+        width: 1px;
+        height: 100%;
+        background-color: #ddd;
+      }
+    }
+  }
+  dl {
+    text-align: left;
+    & + dl {
+      margin-top: vw-pc(60);
+    }
+  }
+  dt {
+    margin-bottom: vw-pc(20);
+    font-size: vw-pc(18);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: vw-pc(29);
+  }
+  dd {
+    position: relative;
+    padding-left: 0.8em;
+    color: #666;
+    font-size: vw-pc(16);
+    letter-spacing: -0.025em;
+    line-height: vw-pc(24);
+    white-space: pre-line;
+    &::before {
+      content: "\00B7";
+      position: absolute;
+      top: -1px;
+      left: 0;
+    }
+  }
+}
