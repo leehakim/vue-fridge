@@ -8,6 +8,7 @@
   }
   .text_box {
     position: relative;
+    box-sizing: border-box;
     width: vw-pc(660);
     & + .text_box {
       box-sizing: border-box;
@@ -53,5 +54,43 @@
   }
   a {
     color: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .notice {
+    padding: vw-mo(60) 0;
+    .notice_container {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .text_box {
+      width: 100%;
+      padding: 0 vw-mo(30) 0 vw-mo(60);
+      margin-top: vw-mo(60);
+      & + .text_box {
+        &::before {
+          content: "";
+          display: none;
+        }
+      }
+    }
+    dl {
+      & + dl {
+        margin-top: vw-mo(60);
+      }
+    }
+    dt {
+      margin-bottom: vw-mo(20);
+      font-size: vw-mo(28);
+      letter-spacing: 0;
+      line-height: vw-mo(34);
+    }
+    dd {
+      font-size: vw-mo(22);
+      letter-spacing: -0.045em;
+      line-height: vw-mo(40);
+    }
   }
 }
