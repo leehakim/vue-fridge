@@ -89,7 +89,7 @@
       </div>
       <div v-if="show">
         <div class="toggle_contents">
-          <p>혜택 유의 사항</p>
+          <PhotoEventNotice />
         </div>
       </div>
     </div>
@@ -97,8 +97,11 @@
 </template>
 
 <script>
+import PhotoEventNotice from "./PhotoNotice.vue";
+
 export default {
-  components: {},
+  
+  components: {PhotoEventNotice},
 
   setup() {
 	const show = ref(false);

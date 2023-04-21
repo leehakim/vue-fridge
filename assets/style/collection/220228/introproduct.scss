@@ -1,5 +1,5 @@
 .sec_intro {
-	margin-bottom: vw-pc(50);
+	margin-bottom: vw-pc(70);
 	.section_container {
 		padding: 0 vw-pc(60);
 	}
@@ -10,6 +10,7 @@
 		p {
 			margin-right: vw-pc(20);
 			font-size: vw-pc(26);
+			letter-spacing: vw-pc(-3);
 			line-height: vw-pc(36);
 		}
 		.common_button {
@@ -33,14 +34,15 @@
 			.contents_area {
 				display: flex;
 				> picture {
-					margin-right: vw-pc(20);
+					margin-right: vw-pc(10);
 				}
 				.txt_box {
+					p {white-space: pre-line;}
 					.main_txt {
 						margin-bottom: vw-pc(10);
-						font-size: vw-pc(24);
+						font-size: vw-pc(22);
 						line-height: vw-pc(26);
-						letter-spacing: vw-pc(-1);
+						letter-spacing: vw-pc(-2);
 						font-weight: 700;
 					}
 					.sub_txt {
