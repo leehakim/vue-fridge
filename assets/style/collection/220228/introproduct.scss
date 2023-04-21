@@ -73,12 +73,9 @@
 			width: vw-pc(55);
 		}
 		&:nth-child(5) .contents_area picture {
-			width: vw-pc(15);
-		}
-		&:nth-child(6) .contents_area picture {
 			width: vw-pc(44);
 		}
-		&:nth-child(7) .contents_area picture {
+		&:nth-child(6) .contents_area picture {
 			width: vw-pc(50);
 		}
 	}
@@ -96,4 +93,101 @@
     .swiper-button-prev:after, .swiper-button-next::after {
         font-size: vw-pc(24); font-weight: 700;
     }
+}
+
+@media (max-width: 768px) {
+	.sec_intro {
+		margin-bottom: vw-mo(70);
+		.section_container {
+			padding: 0 vw-mo(60);
+		}
+		.title_box {
+			justify-content: space-between;
+			margin-bottom: vw-mo(40);
+			strong {display: none;}
+			p {
+				margin-right: vw-mo(0);
+				font-size: vw-mo(44);
+				letter-spacing: vw-mo(-3);
+				line-height: vw-mo(56);
+				font-weight: 700;
+			}
+			.common_button {
+				width: vw-mo(191);
+				height: vw-mo(56);
+				font-size: vw-mo(22);
+				line-height: vw-mo(36);
+				border-radius: vw-mo(28);
+				letter-spacing: vw-mo(-2);
+			}
+		}
+	
+		// swiper setting
+		.swiper-slide {
+			width: vw-mo(536);
+			&:not(:last-child) {margin-right: vw-mo(24);}
+			.slide_list {
+				> picture {
+					margin-bottom: vw-mo(45);
+				}
+				.contents_area {
+					> picture {
+						margin-right: vw-mo(10);
+					}
+					.txt_box {
+						.main_txt {
+							margin-bottom: vw-mo(15);
+							font-size: vw-mo(30);
+							line-height: vw-mo(32);
+							letter-spacing: vw-mo(-2);
+						}
+						.sub_txt {
+							margin-bottom: vw-mo(20);
+							font-size: vw-mo(21);
+							line-height: vw-mo(28);
+							letter-spacing: vw-mo(-2);
+						}
+						.add_txt {
+							font-size: vw-mo(18);
+							line-height: vw-mo(26);
+							letter-spacing: vw-mo(-2.5);
+							color: #717171;
+						}
+					}
+				}
+			}
+			&:nth-child(1) .contents_area picture {
+				width: vw-mo(39);
+			}
+			&:nth-child(2) .contents_area picture {
+				width: vw-mo(18);
+			}
+			&:nth-child(3) .contents_area picture {
+				width: vw-mo(27);
+			}
+			&:nth-child(4) .contents_area picture {
+				width: vw-mo(66);
+			}
+			&:nth-child(5) .contents_area picture {
+				width: vw-mo(54);
+			}
+			&:nth-child(6) .contents_area picture {
+				width: vw-mo(58);
+			}
+		}
+	
+		// swiper navigation set
+		.swiper-button-prev, .swiper-button-next {
+			top: 43%; 
+		}
+		.swiper-button-prev {
+			left: 1%;
+		}
+		.swiper-button-next {
+			right: 1%;
+		}
+		.swiper-button-prev:after, .swiper-button-next::after {
+			font-size: vw-mo(24);
+		}
+	}
 }

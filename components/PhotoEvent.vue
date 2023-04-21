@@ -7,9 +7,9 @@
             <div class="title_box">
               <p class="main_txt">포토 상품평 이벤트</p>
               <p class="sub_txt">
-                <strong>BE</strong>SPOKE 1도어 와인냉장고의 리얼 후기를 삼성닷컴
-                포토상품평으로<br>
-                남긴 후 이벤트 응모 시 <strong>전원 올리브영 3만원</strong> 상품권을 드립니다!
+                <strong>BE</strong>SPOKE 1도어 와인냉장고의 리얼 후기를<br class="m_show"> 삼성닷컴
+                포토상품평으로<br class="m_hide">
+                남긴 후 <br class="m_show">이벤트 응모 시 <strong>전원 올리브영 3만원</strong> 상품권을 드립니다!
               </p>
             </div>
             <dl>
@@ -48,7 +48,8 @@
             </div>
           </div>
           <picture>
-            <img :src="'/event_olive_pc.png'" />
+            <img class="m_hide" :src="'/event_olive_pc.png'" />
+            <img class="m_show" :src="'/event_olive_mo.png'" />
           </picture>
         </div>
         <div class="way_area">
@@ -60,15 +61,16 @@
               </picture>
               <p class="contents_txt">
                 구매한 제품의<br />
-                인증샷 촬영하기
+                인증샷 <br class="m_show">촬영하기
               </p>
             </li>
             <li>
               <picture>
-                <img :src="'/event_way02_pc.png'" />
+                <img class="m_hide" :src="'/event_way02_pc.png'" />
+                <img class="m_show" :src="'/event_way02_mo.png'" />
               </picture>
               <p class="contents_txt">
-                <strong>[#삼성전자이벤트]</strong>와 함께<br />
+                <strong>[#삼성전자이벤트]</strong>와 함께<br class="m_hide"/>
                 제품 페이지에서<br />
                 포토 상품평 남기기
               </p>
@@ -76,7 +78,8 @@
             </li>
             <li>
               <picture>
-                <img :src="'/event_way03_pc.png'" />
+                <img class="m_hide" :src="'/event_way03_pc.png'" />
+                <img class="m_show" :src="'/event_way03_mo.png'" />
               </picture>
               <p class="contents_txt">
                 개인정보 입력과 함께<br />
@@ -86,6 +89,16 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div class="btn_box_mo">
+        <nuxt-link to="#" class="common_button black_bg">응모하기</nuxt-link>
+        <button
+        class="toggle_arrow toggle_btn"
+        :class="{ open: show }"
+        @click="show = !show"
+        >
+        포토 상품평 유의사항 보기
+        </button>
       </div>
       <div v-if="show">
         <div class="toggle_contents">

@@ -2,7 +2,7 @@
   <section class="section sec_intro">
     <div class="section_container">
       <div class="title_box">
-        <p><strong>BESPOKE,</strong> 와인 전문 냉장고를 소개합니다</p>
+        <p><strong>BESPOKE,</strong> 와인 전문 냉장고를 <br class="m_show">소개합니다</p>
         <nuxt-link to="#" class="common_button black_bg">제품 자세히 보기</nuxt-link>
       </div>
       <swiper slidesPerView="auto" class="swiper" v-bind="swiperOptions">
@@ -10,11 +10,13 @@
           {{ group.item }}
           <div class="slide_list">
             <picture>
-              <img :src="'/intro_slide' + idx + '_pc.png'"/>
+              <img class="m_hide" :src="'/intro_slide' + idx + '_pc.png'"/>
+              <img class="m_show" :src="'/intro_slide' + idx + '_mo.png'"/>
             </picture>
             <div class="contents_area">
               <picture>
-                <img :src="'/intro_slide_ico' + idx + '_pc.png'" />
+                <img class="m_hide" :src="'/intro_slide_ico' + idx + '_pc.png'" />
+                <img class="m_show" :src="'/intro_slide_ico' + idx + '_mo.png'" />
               </picture>
               <div class="txt_box">
                 <p class="main_txt">
