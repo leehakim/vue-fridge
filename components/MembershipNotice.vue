@@ -8,6 +8,7 @@
       <div class="text_box">
         <NoticeItem :notice-data="NoticeData[2]" />
         <NoticeItem :notice-data="NoticeData[3]" />
+        <NoticeItem :notice-data="NoticeData[4]" />
       </div>
     </div>
   </div>
