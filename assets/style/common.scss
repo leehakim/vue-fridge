@@ -3,6 +3,9 @@ html {
   padding: 0;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 picture {
   display: block;
   width: 100%;
@@ -71,7 +74,7 @@ button {
 
   .en_m {
     font-family: "SamsungSharpSans";
-    font-weight: medium;
+    font-weight: 500;
     letter-spacing: 0;
     line-height: 1;
   }
@@ -107,6 +110,32 @@ button {
       transform: translateY(-50%) rotate(180deg);
     }
   }
+
+  .common_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .common_button.black_bg {
+    color: #fff;
+    background-color: #000;
+    &:hover {
+      background-color:transparent;
+      color: #000;
+      border: vw-pc(1) solid #000;
+    }
+  }
+  .common_button.white_bg {
+    color: #000;
+    background-color: #fff;
+    &:hover {
+      background-color:transparent;
+      color: #fff;
+      border: vw-pc(1) solid #fff;
+    }
+  }
+
 }
 
 @media (max-width: 768px) {

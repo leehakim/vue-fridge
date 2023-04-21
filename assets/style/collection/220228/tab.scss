@@ -1,0 +1,122 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-bottom: vw-pc(3) solid #000;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: vw-pc(12);
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+  }
+  .section_container {
+    padding: 0 vw-pc(60);
+  }
+  .tab {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    box-sizing: border-box;
+    height: vw-pc(120);
+    padding-top: vw-pc(12);
+    background-color: #fff;
+    &.active {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: vw-pc(7);
+        right: 0;
+        width: vw-pc(10);
+        height: 100%;
+        background-color: #ddd;
+        transform: skewY(40deg);
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: vw-pc(318);
+        height: 100%;
+        border-radius: vw-pc(6) vw-pc(6) 0 0;
+        background-color: #000;
+      }
+      .tab_text {
+        border: 0;
+        color: #fff;
+      }
+    }
+  }
+  .tab_text {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: vw-pc(328);
+    height: 100%;
+    padding: vw-pc(17) vw-pc(25) 0;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  .tit {
+    font-size: vw-pc(21);
+    letter-spacing: -0.025em;
+    line-height: vw-pc(28);
+    white-space: pre-line;
+    text-align: left;
+  }
+  .date {
+    margin-top: vw-pc(10);
+    font-size: vw-pc(14);
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    border-bottom: vw-mo(3) solid #000;
+    &::before {
+      top: vw-mo(12);
+    }
+    .section_container {
+      padding: 0;
+    }
+    .swiper-slide {
+      width: vw-mo(265);
+    }
+    .tab {
+      align-items: flex-start;
+      width: 100%;
+      height: vw-mo(191);
+      padding-top: vw-mo(12);
+      &.active {
+        &::before {
+          top: vw-mo(7);
+          width: vw-mo(10);
+        }
+        &::after {
+          width: vw-mo(254);
+          border-radius: vw-mo(6) vw-mo(6) 0 0;
+        }
+      }
+    }
+    .tab_text {
+      width: 100%;
+      padding: vw-mo(25) vw-mo(30) 0;
+    }
+    .tit {
+      font-size: vw-mo(22);
+      letter-spacing: 0;
+      line-height: vw-mo(26);
+    }
+    .date {
+      margin-top: vw-mo(10);
+      font-size: vw-mo(16);
+    }
+  }
+}

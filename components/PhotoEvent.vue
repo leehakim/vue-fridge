@@ -37,19 +37,14 @@
               </dd>
             </dl>
             <div class="btn_box">
-              <nuxt-link to="#">응모하기</nuxt-link>
+              <nuxt-link to="#" class="common_button black_bg">응모하기</nuxt-link>
               <button
               class="toggle_arrow toggle_btn"
               :class="{ open: show }"
               @click="show = !show"
               >
-              혜택 유의사항을 꼭 확인하세요
+              포토 상품평 유의사항 보기
 				      </button>
-              <div v-if="show">
-                <div class="toggle_contents">
-                  <p>혜택 유의 사항</p>
-                </div>
-              </div>
             </div>
           </div>
           <picture>
@@ -87,9 +82,14 @@
                 개인정보 입력과 함께<br />
                 <strong>[응모하기]</strong> 버튼 클릭
               </p>
-              <p class="btn_txt">응모하기</p>
+              <p class="apply_txt">응모하기</p>
             </li>
           </ul>
+        </div>
+      </div>
+      <div v-if="show">
+        <div class="toggle_contents">
+          <p>혜택 유의 사항</p>
         </div>
       </div>
     </div>

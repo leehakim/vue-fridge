@@ -3,7 +3,7 @@
     <div class="section_container">
       <div class="title_box">
         <p><strong>BESPOKE,</strong> 와인 전문 냉장고를 소개합니다</p>
-        <nuxt-link to="#" class="detail_btn">제품 자세히 보기</nuxt-link>
+        <nuxt-link to="#" class="common_button black_bg">제품 자세히 보기</nuxt-link>
       </div>
       <swiper slidesPerView="auto" class="swiper" v-bind="swiperOptions">
         <SwiperSlide v-for="(group, idx) in groupList" :key="idx">

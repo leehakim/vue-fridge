@@ -1,4 +1,5 @@
 .sec_intro {
+	margin-bottom: vw-pc(50);
 	.section_container {
 		padding: 0 vw-pc(60);
 	}
@@ -11,18 +12,12 @@
 			font-size: vw-pc(26);
 			line-height: vw-pc(36);
 		}
-		.detail_btn {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		.common_button {
 			width: vw-pc(158);
 			height: vw-pc(38);
-			background-color: #000;
 			font-size: vw-pc(18);
 			line-height: vw-pc(32);
 			border-radius: vw-pc(19);
-			color: #fff;
-			font-weight: 700;
 			letter-spacing: vw-pc(-1);
 		}
 	}

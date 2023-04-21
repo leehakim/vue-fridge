@@ -10,7 +10,9 @@
                 display: flex;
                 .txt_box {
                     .title_box {
+                        margin-bottom: vw-pc(10);
                         .main_txt {
+                            margin-bottom: vw-pc(10);
                             font-size: vw-pc(42);
                             letter-spacing: vw-pc(-2);
                             font-weight: 700;
@@ -18,10 +20,14 @@
                         .sub_txt {
                             font-size: vw-pc(16);
                             line-height: vw-pc(32);
+                            letter-spacing: vw-pc(-1);
                         }
                     }
                     dl {
-                        dt { 
+                        display: flex; 
+                        align-items: center;
+                        dt {
+                            width: vw-pc(100);
                             font-size: vw-pc(14);
                             line-height: vw-pc(30);
                             letter-spacing: vw-pc(-1);
@@ -31,24 +37,29 @@
                             font-size: vw-pc(14);
                             line-height: vw-pc(30);
                             letter-spacing: vw-pc(-1);
+                            &:last-child {line-height: vw-pc(20);}
                         }
                     }
                     .btn_box {
-                        uext-link {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                        display: flex; 
+                        align-items: center;
+                        margin-top: vw-pc(25);
+                        .common_button {
+                            margin-right: vw-pc(40);
                             width: vw-pc(106);
                             height: vw-pc(38);
                             border-radius: vw-pc(19);
-                            color: #fff;
-                            background-color: #000;
                             font-size: vw-pc(16);
                             line-height: vw-pc(36);
                             letter-spacing: vw-pc(-1);
-                            font-weight: 700;
                         }
-                        .toggle_btn {}
+                        .toggle_btn {
+                            font-size: vw-pc(16);
+                            line-height: vw-pc(29);
+                            letter-spacing: vw-pc(-1);
+                            font-weight: 700;
+                            border-bottom: vw-pc(1) solid #000;
+                        }
                         .toggle_contents {
                             p {}
                         }
@@ -56,13 +67,80 @@
                 }
                 > picture {
                     width: vw-pc(187);
+                    margin-top: vw-pc(40);
                 }
             }
     
             // 오른쪽영역
             .way_area {
-                .small_title {}
-                ul {display: flex;}
+                .small_title {
+                    position: relative;
+                    margin-bottom: vw-pc(35);
+                    font-size: vw-pc(18);
+                    line-height: vw-pc(35);
+                    letter-spacing: vw-pc(-1);
+                    font-weight: 700;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        width: vw-pc(500);
+                        height: vw-pc(1);
+                        background-color: #000;
+                    }
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        width: vw-pc(200);
+                        height: vw-pc(305);
+                        &:not(:last-child) {
+                            margin-right: vw-pc(20);
+                        }
+                        border: vw-pc(1) solid #ddd;
+                        border-radius: vw-pc(10);
+                        box-shadow: 2px 2px 8px 0 #ddd;
+                        text-align: center;
+                        picture {
+                            margin-bottom: vw-pc(10);
+                        }
+                        .contents_txt {
+                            font-size: vw-pc(16);
+                            line-height: vw-pc(28);
+                            letter-spacing: vw-pc(-1);
+                        }
+                        .line_txt {
+                            margin-top: vw-pc(5);
+                            font-size: vw-pc(16);
+                            line-height: vw-pc(28);
+                            letter-spacing: vw-pc(-1);
+                            border-bottom: vw-pc(1) solid #000;
+                            font-weight: 700;
+                        }
+                        .apply_txt {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: vw-pc(111);
+                            height: vw-pc(34);
+                            margin-top: vw-pc(30);
+                            color: #fff;
+                            background-color: #000;
+                            font-size: vw-pc(16);
+                            line-height: vw-pc(28);
+                            letter-spacing: vw-pc(-1);
+                            border-radius: vw-pc(17);
+                            font-weight: 700;
+                        }
+                    }
+                }
             }
         }
     }
