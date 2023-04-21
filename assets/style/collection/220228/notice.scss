@@ -54,6 +54,21 @@
   }
   a {
     color: inherit;
+    &.more{
+      position: relative;
+      font-weight: 700;
+      color: #000000;
+      &::after{
+        content: "";
+        position: absolute;
+        right: vw-pc(-10);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 10px;
+        background: url("/arrow_right_pc.png") no-repeat center;
+      }
+    }
   }
 }
 

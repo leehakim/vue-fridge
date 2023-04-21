@@ -7,7 +7,7 @@
         <a href="#" class="more">더 많은 혜택 보러가기</a>
       </div>
       <ul>
-        <li>
+        <!-- <li>
           <MembershipListItem idx="1">
             <template #tit>삼성전자 멤버십<br />최대 26만 포인트 적립</template>
           </MembershipListItem>
@@ -43,10 +43,24 @@
             </template>
             <template #cta>더 알아보기</template>
           </MembershipListItem>
+        </li> -->
+        <li v-for="membership in memberships" :key="membership.idx">
+          <MembershipListItem :membership="membership"></MembershipListItem>
         </li>
       </ul>
       <div class="center_box">
-        <a class="btn_toggle" href="#">혜택 유의사항을 꼭 확인하세요</a>
+        <button
+          class="toggle_arrow toggle_btn"
+          :class="{ open: show }"
+          @click="show = !show"
+        >
+          혜택 유의사항을 꼭 확인하세요
+        </button>
+        <div v-if="show">
+          <div class="toggle_contents">
+            <MembershipNotice />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -54,10 +68,16 @@
 
 <script>
 import MembershipListItem from "./MembershipListItem.vue";
+import MembershipData from "~/json-data/MembershipList.json";
+
+import MembershipNotice from "./MembershipNotice.vue";
 export default {
-  components: { MembershipListItem },
+  name: "MembershipList",
+  components: { MembershipListItem, MembershipNotice },
   setup() {
-    return {};
+    const show = ref(false);
+    const memberships = MembershipData.membership_list;
+    return { show, memberships };
   },
 };
 </script>

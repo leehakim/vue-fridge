@@ -1,0 +1,42 @@
+[
+  {
+    "color": "새틴 화이트",
+    "prd_num": "RA-M17DAAW6",
+    "price": "2,399,000",
+    "benefit": "1,990,000",
+    "new": true,
+    "best": false
+  },
+  {
+    "color": "새틴 베이지",
+    "prd_num": "RA-M17DAA39",
+    "price": "2,399,000",
+    "benefit": "1,990,000",
+    "new": false,
+    "best": true
+  },
+  {
+    "color": "코타 차콜",
+    "prd_num": "RA-M17DAA05",
+    "price": "2,199,000",
+    "benefit": "1,790,000",
+    "new": false,
+    "best": true
+  },
+  {
+    "color": "코타 모닝블루",
+    "prd_num": "RA-M17DAA3B",
+    "price": "2,199,000",
+    "benefit": "1,790,000",
+    "new": true,
+    "best": false
+  },
+  {
+    "color": "글램 핑크",
+    "prd_num": "RA-M17DAA32",
+    "price": "2,399,000",
+    "benefit": "1,990,000",
+    "new": false,
+    "best": false
+  }
+]

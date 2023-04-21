@@ -1,0 +1,75 @@
+.buying {
+  padding-bottom: vw-pc(97);
+  .section_top {
+    position: relative;
+    box-sizing: border-box;
+    height: vw-pc(100);
+    padding: vw-pc(20) vw-pc(60) 0;
+  }
+  .title {
+    font-size: vw-pc(40);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  .btn_custom {
+    position: absolute;
+    top: 0;
+    right: vw-pc(60);
+    width: vw-pc(240);
+    height: vw-pc(60);
+    border-radius: vw-pc(30);
+    font-size: vw-pc(18);
+    letter-spacing: -0.025em;
+  }
+  .buying_item {
+    position: relative;
+    padding-right: vw-pc(5);
+  }
+  .buying_item_container {
+    width: vw-pc(280);
+    height: vw-pc(511);
+    background-color: #f8f8f8;
+    border-radius: vw-pc(10);
+  }
+  .color {
+    font-size: vw-pc(18);
+    font-weight: 700;
+    text-align: center;
+  }
+  .prd_num {
+    margin-top: vw-pc(25);
+    color: #666;
+    font-size: vw-pc(15);
+    text-align: center;
+  }
+  .divider {
+    width: vw-pc(200);
+    border-top: 1px solid #666;
+  }
+  .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: vw-pc(21);
+    right: 0;
+    width: vw-pc(58);
+    height: vw-pc(65);
+    p {
+      color: #fff;
+      font-size: vw-pc(14);
+      text-align: center;
+    }
+    span {
+      display: block;
+      font-size: vw-pc(17);
+      line-height: vw-pc(20);
+    }
+    &.new {
+      background: url("/buying_new_pc.png") 0 0 / contain no-repeat;
+    }
+    &.best {
+      background: url("/buying_best_pc.png") 0 0 / contain no-repeat;
+    }
+  }
+}

@@ -2,19 +2,17 @@
   <div class="membership_list_item">
     <picture>
       <source
-        :srcset="'/membership_bg_0' + idx + '_pc.png'"
+        :srcset="'/membership_bg_0' + membership.idx + '_pc.png'"
         media="all and (min-width: 769px)"
       />
-      <img :src="'/membership_bg_0' + idx + '_mo.png'" alt="" />
+      <img :src="'/membership_bg_0' + membership.idx + '_mo.png'" alt="" />
     </picture>
     <div class="text_box">
-      <p class="tit"><slot name="tit"></slot></p>
-      <p class="copy">
-        <slot name="copy"></slot>
-      </p>
-      <a v-if="$slots.cta" href="#" class="cta"><slot name="cta"></slot></a>
-      <p v-if="$slots.disclaimer" class="disclaimer">
-        <slot name="disclaimer"></slot>
+      <p class="tit">{{ membership.title }}</p>
+      <p class="copy">{{ membership.copy }}</p>
+      <a v-if="membership.cta" href="/" class="cta">{{ membership.cta }}</a>
+      <p v-if="membership.disclaimer" class="disclaimer">
+        {{ membership.disclaimer }}
       </p>
     </div>
   </div>
@@ -23,9 +21,17 @@
 <script>
 export default {
   props: {
-    idx: {
-      type: String,
-      default: "1",
+    membership: {
+      type: Object,
+      default() {
+        return {
+          idx: 1,
+          title: "title",
+          copy: "copy",
+          cta: "cta",
+          disclaimer: "disclaimer",
+        };
+      },
     },
   },
   setup(props) {

@@ -66,12 +66,14 @@
             font-size: vw-pc(24);
             font-weight: 700;
             line-height: vw-pc(36);
+            white-space: pre-line;
           }
           .copy {
             font-size: vw-pc(18);
             font-weight: 400;
             line-height: vw-pc(32);
             letter-spacing: -0.025em;
+            white-space: pre-line;
           }
           .cta {
             width: vw-pc(127);
