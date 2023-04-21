@@ -77,7 +77,7 @@ export default {
   setup() {
     const show = ref(false);
     const memberships = MembershipData.membership_list;
-    return { show, memberships, modules: [Navigation] };
+    return { show, memberships };
   },
 };
 </script>
