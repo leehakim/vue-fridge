@@ -4,6 +4,7 @@
     <TheTabs />
     <KeyVisual />
     <BenefitList />
+    <BuyingList />
     <IntroProduct />
     <PhotoEvent />
     <MembershipList />
@@ -12,8 +13,10 @@
 
 <script>
 import { defineComponent } from "@vue/composition-api";
+import BuyingList from "../../components/BuyingList.vue";
 
 export default defineComponent({
+  components: { BuyingList },
   setup() {},
 });
 </script>

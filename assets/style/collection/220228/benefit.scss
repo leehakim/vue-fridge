@@ -13,6 +13,10 @@
     .swiper-slide {
       width: vw-pc(424);
     }
+    .benefit_swiper_prev,
+    .benefit_swiper_next {
+      display: none;
+    }
   }
   .benefit_list_item {
     position: relative;

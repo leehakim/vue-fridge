@@ -11,7 +11,7 @@
           :slides-per-view="'auto'"
           :space-between="24"
           :modules="modules"
-          :breakpoints="{ '769': { slidesPerView: 3 } }"
+          :breakpoints="{ '769': { slidesPerView: 3, navigation: false } }"
         >
           <SwiperSlide v-for="benefit in benefits" :key="benefit.idx">
             <BenefitListItem :benefit="benefit"></BenefitListItem>
@@ -49,7 +49,6 @@ import "swiper/scss/navigation";
 import BenefitNotice from "./BenefitNotice.vue";
 
 export default {
-  name: "BenefitList",
   components: { BenefitListItem, Swiper, SwiperSlide, BenefitNotice },
   setup() {
     const show = ref(false);
