@@ -2,13 +2,15 @@
   padding: vw-pc(98) 0;
   .notice_container {
     display: flex;
+    justify-content: space-between;
+    width: vw-pc(1420);
+    margin: auto;
   }
   .text_box {
     position: relative;
-    width: 50%;
+    width: vw-pc(660);
     & + .text_box {
       box-sizing: border-box;
-      padding-left: vw-pc(55);
       &::before {
         content: "";
         display: block;
@@ -48,5 +50,8 @@
       top: -1px;
       left: 0;
     }
+  }
+  a {
+    color: inherit;
   }
 }

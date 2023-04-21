@@ -1,9 +1,7 @@
 <template>
   <dl>
     <dt>{{ noticeData.title }}</dt>
-    <dd v-for="(text, idx) in noticeData.text" :key="idx">
-      {{ text }}
-    </dd>
+    <dd v-for="(text, idx) in noticeData.text" :key="idx" v-html="text"></dd>
   </dl>
 </template>
 
