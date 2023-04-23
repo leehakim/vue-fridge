@@ -8,23 +8,17 @@
         </button>
       </div>
       <div class="buying_swiper">
-        <swiper
-          :navigation="{
-            nextEl: `.benefit_swiper_next`,
-            prevEl: `.benefit_swiper_prev`,
-          }"
-          pagination
-          :slides-per-view="2"
-          :space-between="24"
-          :modules="modules"
-          :breakpoints="{ '769': { slidesPerView: 'auto' } }"
-        >
+        <swiper v-bind="swiperOptions">
           <SwiperSlide v-for="(data, idx) in BuyingData" :key="idx">
             <BuyingListItem :item="data" />
           </SwiperSlide>
         </swiper>
-        <button class="benefit_swiper_next">next</button>
-        <button class="benefit_swiper_prev">prev</button>
+        <p class="add_txt">
+          *본 혜택가는 한정수량으로 제공되며 해당 물량 소진 시 혜택가가 변동될 수 있습니다 
+        </p>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
@@ -33,17 +27,31 @@
 <script>
 import BuyingData from "~/json-data/BuyingList.json";
 
-import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
+import "swiper/scss";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 import "swiper/scss/navigation";
-import "swiper/css/pagination";
-import BuyingListItem from "./BuyingListItem.vue";
+import "swiper/scss/pagination";
+SwiperCore.use([Pagination, Navigation]);
 
+import BuyingListItem from "./BuyingListitem.vue"
 export default {
   components: { Swiper, SwiperSlide, BuyingListItem },
   setup() {
-    return { BuyingData, modules: [Navigation, Pagination] };
+    return { 
+      BuyingData,
+      swiperOptions: {
+        slidesPerView: 'auto',
+        navigation: {
+          prevEl: ".buying .swiper-button-prev",
+          nextEl: ".buying .swiper-button-next",
+        },
+        pagination: {
+          el: ".buying .swiper-pagination",
+          clickable: true
+        },
+      },
+    };
   },
 };
 </script>
