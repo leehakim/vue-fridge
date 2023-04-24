@@ -53,7 +53,6 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import $ from "jquery";
-
 import BuyingListItem from "./BuyingListitem.vue";
 
 export default {
@@ -78,7 +77,7 @@ export default {
           // this.swiperOptions.autoplay.stop()
           $(".swiper-pagination-bullet-active span").css(
             "animation-play-state",
-            "paused"
+            "paused",
           );
           isSwiperPlay = 1;
           console.log(isSwiperPlay);
@@ -87,7 +86,7 @@ export default {
           // this.swiperOptions.autoplay.start()
           $(".swiper-pagination-bullet-active span").css(
             "animation-play-state",
-            "running"
+            "running",
           );
           isSwiperPlay = 0;
           console.log(isSwiperPlay);
