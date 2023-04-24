@@ -13,7 +13,9 @@
     <div class="text_box">
       <p class="tit">{{ benefit.title }}</p>
       <p class="copy">{{ benefit.copy }}</p>
-      <a v-if="benefit.cta" href="/" class="cta">{{ benefit.cta }}</a>
+      <nuxt-link v-if="benefit.cta" to="/" class="cta">{{
+        benefit.cta
+      }}</nuxt-link>
       <p v-if="benefit.disclaimer" class="disclaimer">
         {{ benefit.disclaimer }}
       </p>
