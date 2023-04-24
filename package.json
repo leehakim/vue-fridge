@@ -11,6 +11,7 @@
   "devDependencies": {
     "@nuxt/types": "^2.16.3",
     "@rushstack/eslint-patch": "^1.2.0",
+    "@types/jquery": "^3.5.16",
     "@vue/eslint-config-prettier": "^7.1.0",
     "eslint": "^8.38.0",
     "eslint-plugin-vue": "^9.11.0",
@@ -20,6 +21,7 @@
     "sass-loader": "^13.2.2"
   },
   "dependencies": {
+    "jquery": "^3.6.4",
     "swiper": "^9.2.2",
     "vue": "^3.2.47",
     "vuex": "^4.0.2"

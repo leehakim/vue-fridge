@@ -120,7 +120,7 @@
   // swiper pagination
   .swiper-pagination {
     bottom: vw-pc(120);
-    span {
+    .swiper-pagination {
       width: vw-pc(11);
       height: vw-pc(11);
       color: #000;
@@ -129,4 +129,152 @@
   .swiper-pagination-bullet {
     background-color: #000;
   }
+}
+
+@media (max-width: 768px) {
+  .buying {
+    padding-bottom: vw-mo(160);
+    overflow:hidden;
+    .section_top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: vw-mo(60);
+    }
+    .section_container {
+      padding: 0 0 0 vw-mo(60);
+    }
+    .title {
+      margin-bottom: vw-mo(45);
+      font-size: vw-mo(44);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: vw-mo(56);
+    }
+    .btn_custom {
+      width: vw-mo(284);
+      height: vw-mo(56);
+      border-radius: vw-mo(28);
+      font-size: vw-mo(22);
+      letter-spacing: vw-mo(-2);
+    }
+    .swiper {
+      overflow: visible;
+    }
+    .swiper-slide {
+      position: relative;
+      width: vw-mo(320);
+      height: vw-mo(591);
+      background-color: #f8f8f8;
+      border-radius: vw-mo(10);
+      &:not(:last-child) {
+        margin-right: vw-mo(20);
+      }
+    }
+    .buying_img {
+      margin-bottom: vw-mo(60);
+    }
+    .color {
+      font-size: vw-mo(30);
+      font-weight: 700;
+      text-align: center;
+    }
+    .prd_num {
+      margin-top: vw-mo(35);
+      font-size: vw-mo(18);
+      padding-bottom: vw-mo(12);
+    }
+    .divider {
+      width: vw-mo(270);
+      margin-bottom: vw-mo(30);
+      border-top: 1px solid #000;
+      opacity: 0.15;
+    }
+    .price_box, .benefit_box {
+      display: flex;
+      justify-content: space-between;
+      width: vw-mo(270);
+      margin: 0 auto;
+      color: #999;
+      dt, dd {
+        font-size: vw-mo(22);
+        letter-spacing: vw-mo(-1);
+      }
+    }
+    .benefit_box {
+      color: #000;
+      margin-top: vw-mo(15);
+    }
+    .tag {
+      top: vw-mo(21);
+      right: vw-mo(-15);
+      width: vw-mo(72);
+      height: vw-mo(72);
+      p {
+        color: #fff;
+        font-size: vw-mo(19);
+        line-height: vw-mo(28);
+      }
+      span {
+        display: block;
+        font-size: vw-mo(19);
+        line-height: vw-mo(24);
+      }
+      &.new {
+        background: url("/buying_new_mo.png") 0 0 / contain no-repeat;
+      }
+      &.best {
+        background: url("/buying_best_mo.png") 0 0 / contain no-repeat;
+      }
+    }
+    .add_txt {
+      margin-top: vw-mo(35);
+      font-size: vw-mo(18);
+      letter-spacing: vw-mo(-2);
+    }
+  
+    // swiper navigation
+    .swiper-button-prev, .swiper-button-next {
+        color: #000; top: 52%; 
+    }
+    .swiper-button-prev {
+        left: 1.5%;
+    }
+    .swiper-button-next {
+        right: 1.5%;
+    }
+    .swiper-button-prev:after, .swiper-button-next::after {
+        font-size: vw-mo(24); font-weight: 700;
+    }
+  
+    // swiper pagination
+    .swiper-pagination {
+      bottom: vw-mo(110);
+      padding-right:vw-mo(30)
+    }
+    .swiper-pagination-bullet {position: relative;width: vw-mo(51);height: vw-mo(4);border-radius: 0;}
+    .swiper-pagination-bullet-active {--swiper-theme-color: #b1b1b1; opacity: 1; background-color: #b1b1b1;}
+    .swiper-pagination-bullet-active span {position: absolute;left: 0;width: 0;height:vw-mo(4) ;animation: paginationmove 2.7s 0s linear; background-color: #000; z-index: 500; opacity: 1;}
+    .play_btn {
+      display: inline-block;
+      position: absolute;
+      width: vw-mo(23);
+      height: vw-mo(29);
+    }
+    .play_btn.play{
+      background: url('/swiper_play.png') no-repeat; 
+      background-size: vw-mo(23) vw-mo(29)
+    }
+    .play_btn.stop{background: url('/swiper_pause.png') no-repeat; 
+      background-size: vw-mo(23) vw-mo(29)
+    }
+
+    @keyframes paginationmove {
+      0% {width: 0;}
+      100% {width: vw-mo(51)}
+  }
+  }
+
 }
