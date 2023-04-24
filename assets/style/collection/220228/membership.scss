@@ -17,17 +17,11 @@
     align-items: center;
     justify-content: center;
     .sign_up {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: vw-pc(138);
       height: vw-pc(38);
       margin-right: vw-pc(32);
       border-radius: vw-pc(19);
-      background: #000000;
       font-size: vw-pc(16);
-      font-weight: 700;
-      color: #ffffff;
     }
     .more {
       position: relative;
@@ -41,10 +35,10 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: vw-pc(9);
-        width: 6px;
-        height: 10px;
-        background: url("/arrow_right_pc.png") no-repeat center;
+        bottom: vw-pc(10);
+        width: vw-pc(6);
+        height: vw-pc(10);
+        background: url("/arrow_right_pc.png") no-repeat center/cover;
       }
     }
   }
@@ -116,7 +110,7 @@
       }
       &:last-child {
         margin-top: vw-pc(24);
-        background: linear-gradient(to right, #8ad1e7, #76c1d9);
+        background: linear-gradient(to right, #8ed5ea, #76c1d9);
         div {
           width: vw-pc(1320);
           height: vw-pc(300);
@@ -144,5 +138,137 @@
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: vw-pc(29);
+  }
+}
+@media (max-width: 768px) {
+  .membership {
+    margin: vw-mo(100) auto vw-mo(92);
+    padding: vw-mo(130) 0 vw-mo(150) 0;
+    background: #f5f5f5;
+  .section_container {
+    padding: 0 vw-mo(60);
+  }
+  .title {
+    margin-bottom: vw-mo(48);
+    font-size: vw-mo(56);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-align: center;
+  }
+  .btn_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sign_up {
+      width: vw-mo(164);
+      height: vw-mo(56);
+      margin-right: vw-mo(32);
+      border-radius: vw-mo(28);
+      font-size: vw-mo(20);
+    }
+    .more {
+      position: relative;
+      padding-bottom: vw-mo(6);
+      padding-right: vw-mo(19);
+      font-size: vw-mo(20);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      &::after {
+        bottom: vw-mo(12);
+        width: vw-mo(6);
+        height: vw-mo(10);
+      }
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: vw-mo(40);
+    li {
+      border-radius: vw-mo(10);
+      .membership_list_item {
+        position: relative;
+        width: vw-mo(290);
+        .text_box {
+          position: absolute;
+          top: vw-mo(40);
+          left: vw-mo(30);
+          .tit {
+            font-size: vw-mo(25);
+            line-height: vw-mo(35);
+          }
+          .copy {
+            font-size: vw-mo(22);
+            font-weight: 400;
+            line-height: vw-mo(34);
+            letter-spacing: -0.025em;
+            white-space: pre-line;
+          }
+          .cta {
+            width: initial;
+            height: initial;
+            margin-top: vw-mo(48);
+            padding-bottom: vw-mo(5);
+            display: inline-block;
+            border-bottom: 1px solid #000000;
+            border-radius: 0;
+            background: none;
+            font-size: vw-mo(20);
+            color: #000000;
+          }
+          .disclaimer {
+            font-size: vw-mo(16);
+            line-height: vw-mo(36);
+          }
+        }
+      }
+      &:nth-child(1) {
+        margin-bottom: vw-mo(20);
+        background: #efdfbb;
+      }
+      &:nth-child(2) {
+        margin-bottom: vw-mo(20);
+        background: #c6e3f1;
+      }
+      &:nth-child(3) {
+        background: #bfede2;
+      }
+      &:nth-child(4) {
+        background: #c0d6f4;
+      }
+      &:last-child {
+        margin-top: vw-mo(60);
+        background: linear-gradient(to right, #b5e2f2, #9bcce0);
+        div {
+          width: vw-mo(600);
+          height: vw-mo(642);
+        }
+        .text_box {
+          top: 0;
+          left: 0;
+          padding-top: vw-mo(60);
+          text-align: center;
+          .tit {
+            margin-bottom: vw-mo(33);
+            font-size: vw-mo(44);
+          }
+        }
+      }
+    }
+  }
+  .center_box {
+    margin-top: vw-mo(40);
+    text-align: center;
+  }
+  .toggle_btn {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-size: vw-mo(20);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: vw-mo(29);
+  }
   }
 }

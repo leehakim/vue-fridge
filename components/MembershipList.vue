@@ -3,7 +3,9 @@
     <div class="section_container">
       <p class="title">삼성닷컴 회원 혜택 모두보기</p>
       <div class="btn_wrap">
-        <a href="#" class="sign_up">회원 가입하기</a>
+        <a href="#" class="sign_up common_button black_bg btn_custom"
+          >회원 가입하기</a
+        >
         <a href="#" class="more">더 많은 혜택 보러가기</a>
       </div>
       <ul>
