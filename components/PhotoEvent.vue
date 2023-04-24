@@ -48,8 +48,11 @@
             </div>
           </div>
           <picture>
-            <img class="m_hide" :src="'/event_olive_pc.png'" />
-            <img class="m_show" :src="'/event_olive_mo.png'" />
+            <source
+              :srcset="'/event_olive_pc.png'"
+              media="all and (min-width: 769px)"
+            />
+            <img :src="'/event_olive_mo.png'" alt="" />
           </picture>
         </div>
         <div class="way_area">
@@ -57,7 +60,11 @@
           <ul>
             <li>
               <picture>
-                <img :src="'/event_way01_pc.png'" />
+                <source
+                :srcset="'/event_way01_pc.png'"
+                media="all and (min-width: 769px)"
+                />
+                <img :src="'/event_way01_mo.png'" alt="" />
               </picture>
               <p class="contents_txt">
                 구매한 제품의<br />
@@ -66,8 +73,11 @@
             </li>
             <li>
               <picture>
-                <img class="m_hide" :src="'/event_way02_pc.png'" />
-                <img class="m_show" :src="'/event_way02_mo.png'" />
+                <source
+                :srcset="'/event_way02_pc.png'"
+                media="all and (min-width: 769px)"
+                />
+                <img :src="'/event_way02_mo.png'" alt="" />
               </picture>
               <p class="contents_txt">
                 <strong>[#삼성전자이벤트]</strong>와 함께<br class="m_hide"/>
@@ -78,8 +88,11 @@
             </li>
             <li>
               <picture>
-                <img class="m_hide" :src="'/event_way03_pc.png'" />
-                <img class="m_show" :src="'/event_way03_mo.png'" />
+                <source
+                :srcset="'/event_way03_pc.png'"
+                media="all and (min-width: 769px)"
+                />
+                <img :src="'/event_way03_mo.png'" alt="" />
               </picture>
               <p class="contents_txt">
                 개인정보 입력과 함께<br />

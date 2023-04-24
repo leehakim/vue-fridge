@@ -10,13 +10,19 @@
           {{ group.item }}
           <div class="slide_list">
             <picture>
-              <img class="m_hide" :src="'/intro_slide' + idx + '_pc.png'"/>
-              <img class="m_show" :src="'/intro_slide' + idx + '_mo.png'"/>
+              <source
+                :srcset="'/intro_slide' + idx + '_pc.png'"
+                media="all and (min-width: 769px)"
+                />
+              <img :src="'/intro_slide' + idx + '_mo.png'" alt="" />
             </picture>
             <div class="contents_area">
               <picture>
-                <img class="m_hide" :src="'/intro_slide_ico' + idx + '_pc.png'" />
-                <img class="m_show" :src="'/intro_slide_ico' + idx + '_mo.png'" />
+                <source
+                  :srcset="'/intro_slide_ico' + idx + '_pc.png'"
+                  media="all and (min-width: 769px)"
+                  />
+                <img :src="'/intro_slide_ico' + idx + '_mo.png'" alt="" />
               </picture>
               <div class="txt_box">
                 <p class="main_txt">
