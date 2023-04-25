@@ -28,6 +28,7 @@
             nextEl: `.buying .swiper-button-next`,
           }"
           :breakpoints="{ '769': { autoplay: false } }"
+          class="buyingSwiper"
         >
           <SwiperSlide v-for="(data, idx) in BuyingData" :key="idx">
             <BuyingListItem :item="data" />
@@ -64,40 +65,40 @@ export default {
     };
   },
   methods: {
-    onSlideChange: () => {
+    onSlideChange() {
       var $bulletActive = $(".buying .swiper-pagination-bullet-active");
       $bulletActive.append("<span></span>").siblings().children().remove();
     },
-    buttonEvt: () => {
+    buttonEvt() {
+      var isSwiperPlay = 0;
       $(".play_btn").on("click", function () {
-        var isSwiperPlay = 0;
-
         if (isSwiperPlay == 0) {
           $(".play_btn").addClass("stop").removeClass("play");
-          // this.swiperOptions.autoplay.stop()
-          $(".swiper-pagination-bullet-active span").css(
-            "animation-play-state",
-            "paused",
-          );
-          isSwiperPlay = 1;
-          console.log(isSwiperPlay);
-        } else {
-          $(".play_btn").addClass("play").removeClass("stop");
-          // this.swiperOptions.autoplay.start()
+          $(".buyingSwiper").autoplayStop();
           $(".swiper-pagination-bullet-active span").css(
             "animation-play-state",
             "running",
           );
+          isSwiperPlay = 1;
+        } else {
+          $(".play_btn").addClass("play").removeClass("stop");
+          $(".buyingSwiper").Autoplay.start();
+          $(".swiper-pagination-bullet-active span").css(
+            "animation-play-state",
+            "paused",
+          );
           isSwiperPlay = 0;
-          console.log(isSwiperPlay);
         }
+        console.log(isSwiperPlay);
       });
+      console.log(this.modules.Autoplay);
     },
   },
   mounted() {
     var swiperPaination = $(".swiper-pagination");
-    swiperPaination.append('<span class="play_btn play"></span>');
+    swiperPaination.append('<span class="play_btn stop"></span>');
     this.buttonEvt();
+    this.onSlideChange();
   },
 };
 </script>
