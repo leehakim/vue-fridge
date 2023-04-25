@@ -260,15 +260,17 @@
     .play_btn {
       display: inline-block;
       position: absolute;
+      right: vw-mo(220);
+      bottom: vw-mo(102);
       width: vw-mo(23);
       height: vw-mo(29);
+      background: url('/swiper_pause.png') no-repeat; 
+      background-size: vw-mo(23) vw-mo(29);
+      z-index: 10;
     }
-    .play_btn.play{
+    .play_btn.stop{
       background: url('/swiper_play.png') no-repeat; 
-      background-size: vw-mo(23) vw-mo(29)
-    }
-    .play_btn.stop{background: url('/swiper_pause.png') no-repeat; 
-      background-size: vw-mo(23) vw-mo(29)
+      background-size: vw-mo(23) vw-mo(29);
     }
 
     @keyframes paginationmove {

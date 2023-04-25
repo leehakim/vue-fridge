@@ -18,6 +18,8 @@
             delay: 2500,
             disableOnInteraction: false,
           }"
+          @autoplay-pause="internalAutoPlaying = false"
+          @autoplay-resume="internalAutoPlaying = true"
           :slides-per-view="'auto'"
           :pagination="{
             el: `.buying .swiper-pagination`,
@@ -28,7 +30,6 @@
             nextEl: `.buying .swiper-button-next`,
           }"
           :breakpoints="{ '769': { autoplay: false } }"
-          class="buyingSwiper"
         >
           <SwiperSlide v-for="(data, idx) in BuyingData" :key="idx">
             <BuyingListItem :item="data" />
@@ -41,6 +42,7 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
+        <button class="play_btn" @click="buttonEvt"></button>
       </div>
     </div>
   </section>
@@ -56,6 +58,9 @@ import "swiper/scss/pagination";
 import $ from "jquery";
 import BuyingListItem from "./BuyingListitem.vue";
 
+// 스와이퍼 재생버튼 매개 변수
+var isSwiperButton = 0;
+
 export default {
   components: { Swiper, SwiperSlide, BuyingListItem },
   setup() {
@@ -70,35 +75,29 @@ export default {
       $bulletActive.append("<span></span>").siblings().children().remove();
     },
     buttonEvt() {
-      var isSwiperPlay = 0;
-      $(".play_btn").on("click", function () {
-        if (isSwiperPlay == 0) {
-          $(".play_btn").addClass("stop").removeClass("play");
-          $(".buyingSwiper").autoplayStop();
-          $(".swiper-pagination-bullet-active span").css(
-            "animation-play-state",
-            "running",
-          );
-          isSwiperPlay = 1;
-        } else {
-          $(".play_btn").addClass("play").removeClass("stop");
-          $(".buyingSwiper").Autoplay.start();
-          $(".swiper-pagination-bullet-active span").css(
-            "animation-play-state",
-            "paused",
-          );
-          isSwiperPlay = 0;
-        }
-        console.log(isSwiperPlay);
-      });
-      console.log(this.modules.Autoplay);
+      if (isSwiperButton == 0) {
+        $(".play_btn").removeClass("stop");
+        // Swiper.autoplay.start();
+        $(".swiper-pagination-bullet-active span").css(
+          "animation-play-state",
+          "running",
+        );
+        isSwiperButton = 1;
+      } else {
+        $(".play_btn").addClass("stop");
+        // Swiper.autoplay.stop();
+        $(".swiper-pagination-bullet-active span").css(
+          "animation-play-state",
+          "paused",
+        );
+        isSwiperButton = 0;
+      }
+      console.log(isSwiperButton);
     },
   },
   mounted() {
-    var swiperPaination = $(".swiper-pagination");
-    swiperPaination.append('<span class="play_btn stop"></span>');
-    this.buttonEvt();
     this.onSlideChange();
+    this.buttonEvt();
   },
 };
 </script>
