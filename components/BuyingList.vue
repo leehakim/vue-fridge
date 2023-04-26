@@ -11,15 +11,11 @@
       </div>
       <div class="buying_swiper">
         <swiper
-          @slideChange="onSlideChange"
-          @onButtonEvt="buttonEvt"
           :modules="modules"
           :autoplay="{
             delay: 2500,
             disableOnInteraction: false,
           }"
-          @autoplay-pause="internalAutoPlaying = false"
-          @autoplay-resume="internalAutoPlaying = true"
           :slides-per-view="'auto'"
           :pagination="{
             el: `.buying .swiper-pagination`,
@@ -30,6 +26,8 @@
             nextEl: `.buying .swiper-button-next`,
           }"
           :breakpoints="{ '769': { autoplay: false } }"
+          class="buyingSwiper"
+          @swiper="setBuyingSwiper"
         >
           <SwiperSlide v-for="(data, idx) in BuyingData" :key="idx">
             <BuyingListItem :item="data" />
@@ -41,8 +39,12 @@
         </p>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-        <button class="play_btn" @click="buttonEvt"></button>
+        <div class="buying_pagination" :class="{ paused: !isPlaying }">
+          <div class="swiper-pagination"></div>
+          <button type="button" class="btn_play" @click="buttonEvt">
+            <span class="hidden">play / pause</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -50,54 +52,43 @@
 
 <script>
 import BuyingData from "~/json-data/BuyingList.json";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/scss";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/vue";
 import { Pagination, Navigation, Autoplay } from "swiper";
+import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import $ from "jquery";
+import "swiper/scss/autoplay";
 import BuyingListItem from "./BuyingListitem.vue";
-
-// 스와이퍼 재생버튼 매개 변수
-var isSwiperButton = 0;
+import { ref } from "vue";
 
 export default {
   components: { Swiper, SwiperSlide, BuyingListItem },
   setup() {
+    const isPlaying = ref(true);
+    const buyingSwiper = ref();
+
+    const setBuyingSwiper = swiper => {
+      buyingSwiper.value = swiper;
+    };
+
+    const buttonEvt = () => {
+      if (isPlaying.value) {
+        buyingSwiper.value.autoplay.pause();
+        isPlaying.value = !isPlaying.value;
+      } else {
+        buyingSwiper.value.autoplay.start();
+        isPlaying.value = !isPlaying.value;
+      }
+    };
+
     return {
       BuyingData,
       modules: [Pagination, Navigation, Autoplay],
+      buttonEvt,
+      isPlaying,
+      buyingSwiper,
+      setBuyingSwiper,
     };
-  },
-  methods: {
-    onSlideChange() {
-      var $bulletActive = $(".buying .swiper-pagination-bullet-active");
-      $bulletActive.append("<span></span>").siblings().children().remove();
-    },
-    buttonEvt() {
-      if (isSwiperButton == 0) {
-        $(".play_btn").removeClass("stop");
-        // Swiper.autoplay.start();
-        $(".swiper-pagination-bullet-active span").css(
-          "animation-play-state",
-          "running",
-        );
-        isSwiperButton = 1;
-      } else {
-        $(".play_btn").addClass("stop");
-        // Swiper.autoplay.stop();
-        $(".swiper-pagination-bullet-active span").css(
-          "animation-play-state",
-          "paused",
-        );
-        isSwiperButton = 0;
-      }
-      console.log(isSwiperButton);
-    },
-  },
-  mounted() {
-    this.onSlideChange();
-    this.buttonEvt();
   },
 };
 </script>

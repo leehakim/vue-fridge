@@ -2,8 +2,13 @@
   <section class="section sec_intro">
     <div class="section_container">
       <div class="title_box">
-        <p><strong>BESPOKE,</strong> 와인 전문 냉장고를 <br class="m_show">소개합니다</p>
-        <nuxt-link to="#" class="common_button black_bg">제품 자세히 보기</nuxt-link>
+        <p>
+          <strong>BESPOKE,</strong> 와인 전문 냉장고를
+          <br class="m_show" />소개합니다
+        </p>
+        <nuxt-link to="#" class="common_button black_bg"
+          >제품 자세히 보기</nuxt-link
+        >
       </div>
       <swiper slidesPerView="auto" class="swiper" v-bind="swiperOptions">
         <SwiperSlide v-for="(group, idx) in groupList" :key="idx">
@@ -13,7 +18,7 @@
               <source
                 :srcset="'/intro_slide' + idx + '_pc.png'"
                 media="all and (min-width: 769px)"
-                />
+              />
               <img :src="'/intro_slide' + idx + '_mo.png'" alt="" />
             </picture>
             <div class="contents_area">
@@ -21,7 +26,7 @@
                 <source
                   :srcset="'/intro_slide_ico' + idx + '_pc.png'"
                   media="all and (min-width: 769px)"
-                  />
+                />
                 <img :src="'/intro_slide_ico' + idx + '_mo.png'" alt="" />
               </picture>
               <div class="txt_box">
