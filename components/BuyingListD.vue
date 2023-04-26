@@ -93,7 +93,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @keyframes progressBar {
   0% {
     width: 0;
@@ -115,6 +115,7 @@ export default {
       position: initial;
       width: auto;
       .swiper-pagination-bullet {
+        position: relative;
         width: vw-mo(51);
         height: vw-mo(3);
         margin: 0 vw-mo(4);
@@ -124,6 +125,9 @@ export default {
         &::after {
           content: "";
           display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 0;
           height: 100%;
           background-color: #000;
@@ -138,6 +142,7 @@ export default {
         }
       }
     }
+
     .btn_play {
       width: vw-mo(29);
       height: vw-mo(29);
@@ -153,10 +158,8 @@ export default {
       }
     }
     &.paused {
-      .swiper-pagination {
-        .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
-          animation-play-state: paused;
-        }
+      .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+        animation-play-state: paused;
       }
       .btn_play::after {
         background-image: url("/swiper_play.png");
