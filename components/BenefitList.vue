@@ -53,6 +53,7 @@ export default {
   setup() {
     const show = ref(false);
     const benefits = BenefitData.benefit_list;
+
     return { show, benefits, modules: [Navigation] };
   },
 };

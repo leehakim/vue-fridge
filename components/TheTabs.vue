@@ -38,6 +38,7 @@ export default {
   },
   setup() {
     const activeNum = ref(4);
+
     return {
       TabData,
       activeNum,
